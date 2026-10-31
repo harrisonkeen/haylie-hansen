@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Haylie Hansen — Actor</title>
+<meta name="description" content="Haylie Hansen, actor. Scenes, credits and casting contact.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Cpath fill=%22%23e3122f%22 d=%22M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.2 0 3.6 1.2 5.3 3.2 1.7-2 3.1-3.2 5.3-3.2 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;500;600&family=Fraunces:ital,opsz,wght,SOFT,WONK@1,9..144,400..700,0..100,0..1&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sugar: #fdeef2;
+    --blush: #f6bccb;
+    --lilac: #9d9ae6;
+    --plum: #3a1b31;
+    --black: #000;
+    --bruise: #24091a;
+    --lipstick: #e3122f;
+    --chalk: #f6f1f1;
+    --sweet-font: 'Fraunces', Georgia, serif;
+    --mean-font: 'Anton', Impact, sans-serif;
+    --scrawl-font: 'Permanent Marker', cursive;
+    --body-font: 'Figtree', system-ui, sans-serif;
+    --wrap: 1240px;
+    --gutter: clamp(16px, 4vw, 48px);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--black); color: var(--chalk); font: 400 17px/1.55 var(--body-font); }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+  :focus-visible { outline: 3px solid var(--lilac); outline-offset: 3px; }
+  .sweet-type { font-family: var(--sweet-font); font-style: italic; font-weight: 560; font-variation-settings: 'SOFT' 100, 'WONK' 1; }
+  .mean-type { font-family: var(--mean-font); font-weight: 400; text-transform: uppercase; letter-spacing: .01em; }
+  .jitter span { display: inline-block; transform: translateY(var(--y, 0)) rotate(var(--r, 0deg)); }
+
+  /* ---------- Hero: two layers of the same face ---------- */
+  .hero { position: relative; height: var(--screen, 100svh); min-height: 560px; overflow: hidden; background: var(--black);
+    --E: calc(var(--screen, 100svh) * .15); --X: 50%; --Y: 36%; }
+  .layer { position: absolute; inset: 0; overflow: hidden; isolation: isolate; }
+  .layer.sweet { background: radial-gradient(ellipse 70% 90% at 50% 40%, #fbe3ea 0%, var(--blush) 70%, #eaa3b7 100%); color: var(--plum); }
+  .layer.villain { background: radial-gradient(ellipse 60% 80% at 50% 45%, #3a0612 0%, #120207 60%, var(--black) 100%); color: var(--chalk); }
+  .face { position: absolute; max-width: none;
+    width: calc(var(--E) / var(--d));
+    left: calc(var(--X) - var(--fx) * var(--E) / var(--d));
+    top: calc(var(--Y) - var(--fy) * var(--ar) * var(--E) / var(--d));
+    -webkit-mask: linear-gradient(to right, transparent 0, #000 22%, #000 78%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 14%, #000 62%, transparent 92%);
+    -webkit-mask-composite: source-in;
+    mask: linear-gradient(to right, transparent 0, #000 22%, #000 78%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 14%, #000 62%, transparent 92%);
+    mask-composite: intersect; }
+  .layer.villain .face { filter: contrast(1.12) saturate(.85) brightness(.88); }
+  .layer.villain::after { content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse calc(var(--E) * 2.4) calc(var(--E) * 3.4) at var(--X) calc(var(--Y) + var(--E) * .5), transparent 30%, rgba(0,0,0,.92) 85%); }
+  .layer.sweet::after { content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse calc(var(--E) * 2.6) calc(var(--E) * 3.6) at var(--X) calc(var(--Y) + var(--E) * .6), transparent 50%, rgba(246,188,203,.55) 100%); }
+
+  .hero-name { position: absolute; inset: 0; margin: 0; z-index: 2; pointer-events: none; font-size: clamp(64px, 9vw, 150px); line-height: .9; }
+  .hero-name > span { position: absolute; top: 50%; transform: translateY(-50%); width: calc(50% - var(--E) * 1.55 - var(--gutter)); }
+  .hero-name .first { left: var(--gutter); text-align: right; }
+  .hero-name .last { right: var(--gutter); text-align: left; }
+  .layer.sweet .hero-name { color: var(--plum); text-shadow: 0 2px 30px rgba(253,238,242,.8); }
+  .layer.villain .hero-name { font-size: clamp(72px, 10.5vw, 172px); color: var(--chalk); text-shadow: .045em .045em 0 var(--lipstick); }
+
+  .corner { position: absolute; bottom: 22px; z-index: 3; font-size: 22px; pointer-events: none; }
+  .corner.sweet { left: var(--gutter); color: var(--plum); }
+  .corner.villain { right: var(--gutter); color: var(--lipstick); font-family: var(--scrawl-font); transform: rotate(-4deg); }
+
+  /* Drag seam */
+  .seam { position: absolute; top: 0; bottom: 0; left: var(--seam, 50%); z-index: 4; width: 0; }
+  .seam::before { content: ''; position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; background: var(--chalk); box-shadow: 0 0 0 1px rgba(0,0,0,.15); }
+  .seam-knob { position: absolute; top: 78%; left: 0; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 6px;
+    padding: 10px 16px; border-radius: 999px; border: 2px solid var(--chalk); background: var(--black); color: var(--chalk);
+    font-weight: 600; font-size: 15px; cursor: ew-resize; touch-action: none; box-shadow: 0 6px 24px rgba(0,0,0,.35); white-space: nowrap; }
+  .seam-knob svg { width: 14px; height: 14px; fill: currentColor; }
+  .seam-knob:hover { background: var(--lipstick); }
+
+  /* ---------- Sides ---------- */
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+  .side { position: relative; padding: clamp(72px, 10vw, 140px) 0; }
+  .side.sweet { background: var(--sugar); color: var(--plum); }
+  .side.villain { background: var(--black); color: var(--chalk); }
+  .side-title { margin: 0 0 clamp(32px, 4vw, 56px); line-height: .95; font-weight: inherit; font-size: clamp(56px, 8vw, 120px); }
+  .side.sweet .side-title { display: flex; align-items: flex-start; gap: .12em; }
+  .side.sweet .side-title svg { width: .38em; height: .38em; margin-top: .1em; fill: none; stroke: var(--lilac); stroke-width: 2.4; stroke-linecap: round; }
+
+  .struck-title { position: relative; display: inline-block; }
+  .struck-title .was { color: rgba(246,241,241,.5); position: relative; display: inline-block; }
+  .struck-title .was svg { position: absolute; left: -4%; top: 6%; width: 108%; height: 90%; overflow: visible; }
+  .struck-title .was path { fill: none; stroke: var(--lipstick); stroke-width: 7; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .struck-title .now { position: absolute; left: 56%; top: -62%; text-shadow: 0 0 2px #000, 0 0 3px #000, 0 0 10px #000, 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000; font-family: var(--scrawl-font); color: var(--lipstick); font-size: .82em; transform: rotate(-7deg) scale(.6); opacity: 0; white-space: nowrap; }
+  .struck-title.drawn .was path { transition: stroke-dashoffset .5s cubic-bezier(.6, 0, .3, 1); stroke-dashoffset: 0; }
+  .struck-title.drawn .was path + path { transition-delay: .35s; }
+  .struck-title.drawn .now { opacity: 1; transform: rotate(-7deg) scale(1); transition: opacity .2s .8s, transform .35s .8s cubic-bezier(.3, 1.6, .5, 1); }
+
+  .side-grid { display: grid; gap: clamp(12px, 1.6vw, 20px); grid-template-columns: 1.5fr 1fr 1fr; }
+  .still { margin: 0; overflow: hidden; border-radius: 4px; }
+  .still img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
+  .side.sweet .still { grid-column: 1; grid-row: 1 / span 2; }
+  .side.sweet .scene.wide { grid-column: 2 / span 2; }
+  .side.villain .side-grid { grid-template-columns: 1fr 1fr 1.5fr; }
+  .side.villain .still { grid-column: 3; grid-row: 1 / span 2; }
+  .side.villain .scene.wide { grid-column: 1 / span 2; }
+
+  .scene { position: relative; display: block; width: 100%; padding: 0; border: 0; border-radius: 4px; overflow: hidden; cursor: pointer; background: #000; text-align: left; }
+  .scene.wide { aspect-ratio: 16 / 9; }
+  .scene.tall { aspect-ratio: 1 / 1; }
+  .scene img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+  .scene[data-pos="face-high"] img { object-position: 50% 30%; }
+  .scene::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.78) 0, rgba(0,0,0,.2) 45%, transparent 70%); }
+  .scene:hover img, .scene:focus-visible img { transform: scale(1.04); }
+  .scene .cap { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 14px 16px; display: flex; align-items: flex-end; gap: 12px; color: #fff; }
+  .scene .play { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; transition: transform .2s; }
+  .scene .play svg { width: 18px; height: 18px; fill: currentColor; margin-left: 3px; }
+  .side.sweet .scene .play { background: var(--blush); color: var(--plum); }
+  .side.villain .scene .play { background: var(--lipstick); color: var(--chalk); }
+  .scene:hover .play { transform: scale(1.1); }
+  .scene strong { display: block; font-weight: 600; font-size: 17px; line-height: 1.2; }
+  .scene small { display: block; font-size: 14px; opacity: .85; }
+  .scene .dur { margin-left: auto; font-size: 14px; font-weight: 600; opacity: .9; }
+
+  /* ---------- The descent: sugar to black ---------- */
+  .side.sweet { --fade: clamp(120px, 16vw, 220px); padding-bottom: var(--fade);
+    background: linear-gradient(to bottom, var(--sugar) calc(100% - var(--fade)), #f0c4d1 calc(100% - var(--fade) / 2), #d98aa4 100%); }
+  .side.villain { --fade: clamp(150px, 20vw, 270px); padding-top: var(--fade);
+    background: linear-gradient(to bottom, #d98aa4 0, #8a2c50 calc(var(--fade) * .3), #3a0f25 calc(var(--fade) * .55), var(--black) calc(var(--fade) * .8)); }
+  .side.villain { padding-bottom: 0; }
+  .xo-divider { margin: 0; padding: clamp(48px, 6vw, 80px) 0 0; text-align: center; font-family: var(--scrawl-font); color: var(--lipstick); font-size: 26px; letter-spacing: .5em; background: var(--black); }
+  .side.villain .still img { filter: brightness(.86) contrast(1.08); }
+
+
+  /* ---------- Credits ---------- */
+  .credits { --c-bg: var(--black); --c-fg: var(--chalk); --c-dim: rgba(246,241,241,.62); --c-rule: rgba(246,241,241,.22); --c-accent: var(--lipstick);
+    background: var(--c-bg); color: var(--c-fg); padding: clamp(48px, 6vw, 80px) 0 clamp(64px, 8vw, 104px); }
+  .credits h2, .footer h2 { margin: 0 0 clamp(28px, 3vw, 44px); font-size: clamp(44px, 6vw, 84px); line-height: 1; }
+  .credit-cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(32px, 5vw, 72px); border-bottom: 1px solid var(--c-rule); }
+  .credit-cols ol { list-style: none; margin: 0; padding: 0; }
+  .credit { display: grid; grid-template-columns: 1fr auto; column-gap: 16px; padding: 16px 0; border-top: 1px solid var(--c-rule); }
+  .credit .t { font-family: var(--sweet-font); font-style: italic; font-weight: 520; font-size: 21px; line-height: 1.25; }
+  .credit .k { color: var(--c-dim); font-size: 15px; }
+  .credit .role { text-align: right; font-weight: 600; font-size: 15px; color: var(--c-accent); white-space: nowrap; }
+  .credit .dir { grid-column: 1 / -1; color: var(--c-dim); font-size: 15px; }
+
+  /* ---------- Footer ---------- */
+  .footer { --c-bg: var(--black); --c-fg: var(--chalk); --c-dim: rgba(246,241,241,.62); --c-rule: rgba(246,241,241,.22); --c-accent: var(--lipstick);
+    position: relative; background: var(--c-bg); color: var(--c-fg); padding: clamp(64px, 9vw, 120px) 0 40px; border-top: 3px solid var(--c-accent); }
+  .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(36px, 6vw, 96px); align-items: start; }
+  .manager .who { font-family: var(--sweet-font); font-style: italic; font-weight: 560; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; margin: 0; }
+  .manager .co { color: var(--c-dim); margin: 4px 0 20px; }
+  .manager a { display: block; width: fit-content; font-size: 19px; text-decoration: none; border-bottom: 2px solid var(--c-accent); margin-bottom: 10px; }
+  .footer-side { display: grid; gap: 22px; }
+  .f-label { margin: 0 0 10px; font-size: 15px; font-weight: 600; color: var(--c-dim); }
+  .direct a { font-size: 19px; text-decoration: none; border-bottom: 2px solid var(--c-accent); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; width: fit-content; padding: 14px 24px; border-radius: 999px; background: var(--c-accent); color: #fff; text-decoration: none; font-weight: 600; }
+  .btn svg { width: 18px; height: 18px; fill: currentColor; }
+  .socials { display: flex; gap: 12px; flex-wrap: wrap; }
+  .socials a { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border: 2px solid var(--c-rule); border-radius: 999px; text-decoration: none; font-weight: 600; }
+  .socials a:hover { border-color: var(--c-accent); }
+  .socials svg { width: 18px; height: 18px; fill: currentColor; }
+  .colophon { margin-top: clamp(56px, 8vw, 96px); display: flex; justify-content: space-between; gap: 16px; color: var(--c-dim); font-size: 14px; }
+  .colophon .xo { font-family: var(--scrawl-font); color: var(--c-accent); font-size: 20px; transform: rotate(-4deg); }
+
+  /* ---------- Theatre ---------- */
+  .theatre { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 16px; background: rgba(0,0,0,.92); }
+  .theatre[hidden] { display: none; }
+  .theatre.sweet { background: rgba(42,14,34,.95); }
+  .screen { margin: 0; display: grid; gap: 10px; }
+  .screen video { display: block; background: #000; border-radius: 4px; }
+  .theatre[data-shape="land"] video { width: min(92vw, 1100px, calc((var(--screen, 100svh) * .86 - 60px) * var(--vr, 1.77))); height: auto; }
+  .theatre[data-shape="tall"] video { height: calc(var(--screen, 100svh) * .86 - 60px); width: auto; max-width: 92vw; }
+  .ctrl { display: flex; align-items: center; gap: 10px; color: #fff; font-size: 14px; font-variant-numeric: tabular-nums; }
+  .ctrl button { flex: none; width: 42px; height: 42px; border-radius: 50%; border: 0; background: var(--t-accent, var(--lipstick)); color: #fff; display: grid; place-items: center; cursor: pointer; }
+  .theatre.sweet { --t-accent: #c45c86; }
+  .ctrl svg { width: 16px; height: 16px; fill: currentColor; }
+  .ctrl input { flex: 1; min-width: 60px; accent-color: var(--t-accent, var(--lipstick)); }
+  .close { position: absolute; top: 16px; right: 16px; padding: 10px 18px; border-radius: 999px; border: 2px solid #fff; background: transparent; color: #fff; font-weight: 600; cursor: pointer; }
+
+  /* ---------- Phones ---------- */
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    .hero { --E: calc(var(--screen, 100svh) * .13); --Y: 33%; }
+    /* first name in the left half, last name in the right, so the seam runs between them, not through a word */
+    .hero-name > span { top: auto; bottom: 9%; transform: none; width: calc(50% - var(--gutter) - 12px); }
+    .hero-name .first { left: var(--gutter); text-align: right; }
+    .hero-name .last { right: var(--gutter); text-align: left; }
+    .seam-knob { top: 54%; }
+    .hero-name > span { white-space: nowrap; }
+    .hero-name { font-size: 12.4vw; }
+    .layer.villain .hero-name { font-size: 13vw; }
+    .corner { display: none; }
+    .side-grid, .side.villain .side-grid { grid-template-columns: 1fr 1fr; }
+    .side .still, .side.sweet .still, .side.villain .still { grid-column: 1 / -1; grid-row: auto; aspect-ratio: 4 / 5; }
+    .side .scene.wide, .side.sweet .scene.wide, .side.villain .scene.wide { grid-column: 1 / -1; }
+    .side.villain .still { order: -1; }
+    .scene .play { width: 40px; height: 40px; }
+    .scene.tall { aspect-ratio: 4 / 5; }
+    .scene.tall .cap { padding: 10px; gap: 8px; }
+    .scene.tall .play { width: 34px; height: 34px; }
+    .scene.tall strong { font-size: 14px; }
+    .scene.tall small { font-size: 12px; }
+    .credit-cols { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer h2 { font-size: 10vw; white-space: nowrap; }
+    .side.sweet { --fade: 56px; }
+    .side.villain { --fade: 96px; }
+    .colophon { flex-direction: column; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3.5v17l14-8.5z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6 3h4v18H6zM14 3h4v18h-4z"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm18.4 6L19 12.6 21.4 10 20 8.6 17.6 11 15.2 8.6 13.8 10l2.4 2.6-2.4 2.4 1.4 1.4 2.4-2.4 2.4 2.4z"/></symbol>
+  <symbol id="i-arrows" viewBox="0 0 24 24"><path d="M9 5 2 12l7 7V5zm6 0v14l7-7-7-7z"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M11 3h2v13.2l4.6-4.6 1.4 1.4-7 7-7-7 1.4-1.4 4.6 4.6z"/></symbol>
+  <symbol id="i-imdb" viewBox="0 0 24 24"><path d="M2 5h20v14H2zm2.5 3v8h1.8V8zm3 0v8h1.6v-5l.9 5h1.1l.9-5v5h1.6V8h-2.3l-.7 4.2L9.8 8zm7.3 0v8h2.1c1.4 0 2-.6 2-2v-4c0-1.4-.6-2-2-2zm1.8 1.4c.4 0 .5.2.5.6v4c0 .4-.1.6-.5.6z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.3-3.3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></symbol>
+</svg>
+
+
+<header class="hero">
+  <div class="layer sweet">
+    <img class="face" src="assets/photos/sweet-cardigan.jpg" alt="Haylie Hansen smiling, in a lilac cardigan" style="--fx:.4945;--fy:.2924;--d:.2137;--ar:1.3953">
+    <h1 class="hero-name sweet-type"><span class="first">Haylie</span><span class="last">Hansen</span></h1>
+    <span class="corner sweet sweet-type">sweetheart</span>
+  </div>
+  <div class="layer villain">
+    <img class="face" src="assets/photos/villain-lace.jpg" alt="Haylie Hansen smirking, in black lace" style="--fx:.5154;--fy:.3168;--d:.1639;--ar:1.540">
+    <p class="hero-name mean-type" aria-hidden="true"><span class="first jitter">Haylie</span><span class="last jitter">Hansen</span></p>
+    <span class="corner villain">badass</span>
+  </div>
+  <div class="seam">
+    <button type="button" class="seam-knob" role="slider" aria-label="Sweetheart or badass" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><svg><use href="#i-arrows"/></svg>Drag</button>
+  </div>
+</header>
+
+<main>
+  <div class="sides">
+    <section class="side sweet" id="sweetheart" aria-labelledby="sweet-title">
+      <div class="wrap">
+        <h2 class="side-title sweet-type" id="sweet-title">Sweetheart<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.3-8.8-8.6C1.8 8.2 3.8 5 7 5c2 0 3.4 1.2 5 3.1C13.6 6.2 15 5 17 5c3.2 0 5.2 3.2 3.8 6.4C19 15.7 12 20 12 20z"/></svg></h2>
+        <div class="side-grid">
+          <figure class="still"><img src="assets/photos/sweet-smile.jpg" alt="Haylie Hansen laughing, hair up" loading="lazy"></figure>
+          <button type="button" class="scene wide" data-video="chicken-sisters" data-shape="land">
+            <img src="assets/video/chicken-sisters.jpg" alt="" loading="lazy">
+            <span class="cap"><span class="play"><svg><use href="#i-play"/></svg></span><span><strong>The Chicken Sisters</strong><small>Recurring, Hallmark series</small></span><span class="dur">1:05</span></span>
+          </button>
+          <button type="button" class="scene tall" data-video="mtt-hospital" data-shape="tall" data-pos="face-high">
+            <img src="assets/video/mtt-hospital.jpg" alt="" loading="lazy">
+            <span class="cap"><span class="play"><svg><use href="#i-play"/></svg></span><span><strong>Mafia's Tender Torture</strong><small>Lead, hospital scene</small></span></span>
+          </button>
+          <button type="button" class="scene tall" data-video="mtt-office" data-shape="tall" data-pos="face-high">
+            <img src="assets/video/mtt-office.jpg" alt="" loading="lazy">
+            <span class="cap"><span class="play"><svg><use href="#i-play"/></svg></span><span><strong>Mafia's Tender Torture</strong><small>Lead, office scene</small></span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="side villain" id="villain" aria-labelledby="villain-title">
+      <div class="wrap">
+        <h2 class="side-title" id="villain-title"><span class="struck-title sweet-type"><span class="was" aria-hidden="true">Sweetheart<svg viewBox="0 0 100 40" preserveAspectRatio="none"><path pathLength="1" d="M2 26 C 20 18, 38 30, 55 20 S 85 14, 98 22"/><path pathLength="1" d="M4 14 C 22 24, 45 10, 62 22 S 88 28, 97 12"/></svg></span><span class="now">Badass</span></span></h2>
+        <div class="side-grid">
+          <button type="button" class="scene wide" data-video="twin-sister" data-shape="tall" data-pos="face-high">
+            <img src="assets/video/twin-sister.jpg" alt="" loading="lazy">
+            <span class="cap"><span class="play"><svg><use href="#i-play"/></svg></span><span><strong>Marrying My Twin Sister's Rich Fiancé</strong><small>Lead</small></span><span class="dur">1:28</span></span>
+          </button>
+          <button type="button" class="scene wide" data-video="heretic" data-shape="land">
+            <img src="assets/video/heretic.jpg" alt="" loading="lazy">
+            <span class="cap"><span class="play"><svg><use href="#i-play"/></svg></span><span><strong>Heretic</strong><small>Principal, A24 feature</small></span><span class="dur">0:27</span></span>
+          </button>
+          <figure class="still"><img src="assets/photos/villain-leather.jpg" alt="Haylie Hansen in a black leather jacket" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <p class="xo-divider" aria-hidden="true">xoxox</p>
+
+  <section class="credits" aria-labelledby="credits-title">
+    <div class="wrap">
+      <h2 class="sweet-type" id="credits-title">Credits</h2>
+      <div class="credit-cols">
+        <ol>
+          <li class="credit"><span><span class="t">Chalk It Up to Love</span> <span class="k">TV movie</span></span><span class="role">Supporting lead</span><span class="dir">Dir. Terry Ingram</span></li>
+          <li class="credit"><span><span class="t">Sidelined 3</span> <span class="k">Feature</span></span><span class="role">Principal</span><span class="dir">Dir. Michael Medico, Tubi</span></li>
+          <li class="credit"><span><span class="t">Rags 2 Richmond</span> <span class="k">Feature</span></span><span class="role">Principal</span><span class="dir">Dir. Tesh Guttikonda</span></li>
+          <li class="credit"><span><span class="t">The Idaho Murders</span> <span class="k">TV movie</span></span><span class="role">Supporting lead</span><span class="dir">Dir. Steven Adelson, Lifetime</span></li>
+          <li class="credit"><span><span class="t">The Chicken Sisters</span> <span class="k">Series</span></span><span class="role">Recurring</span><span class="dir">Dir. various, Hallmark</span></li>
+          <li class="credit"><span><span class="t">Casket Girls</span> <span class="k">Feature</span></span><span class="role">Supporting</span><span class="dir">Dir. Justin Dyck, Lighthouse</span></li>
+        </ol>
+        <ol>
+          <li class="credit"><span><span class="t">How to Lose a Popularity Contest</span> <span class="k">Feature</span></span><span class="role">Principal</span><span class="dir">Dir. Stephen Campanelli, Tubi</span></li>
+          <li class="credit"><span><span class="t">Heretic</span> <span class="k">Feature</span></span><span class="role">Principal</span><span class="dir">Dir. Scott Beck &amp; Bryan Woods, A24</span></li>
+          <li class="credit"><span><span class="t">Mafia's Tender Torture</span> <span class="k">Mini series</span></span><span class="role">Lead</span><span class="dir">Dir. Dom Cutrupi</span></li>
+          <li class="credit"><span><span class="t">Marrying My Twin Sister's Rich Fiancé</span></span><span class="role">Lead</span><span class="dir">Dir. Leo Max</span></li>
+          <li class="credit"><span><span class="t">The Alpha's Heiress Is a Maid</span> <span class="k">Web series</span></span><span class="role">Lead</span><span class="dir">Dir. Eric Zhang</span></li>
+          <li class="credit"><span><span class="t">Trapped in Your Toxic Love</span> <span class="k">Mini series</span></span><span class="role">Lead</span><span class="dir">Dir. Dom Cutrupi</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <h2 class="sweet-type">Casting &amp; bookings</h2>
+    <div class="footer-grid">
+      <div class="manager">
+        <h3 class="f-label">Representation</h3>
+        <p class="who">Shea Cantin</p>
+        <p class="co">Manager, Play Management</p>
+        <a href="mailto:info@playmgmt.com">info@playmgmt.com</a>
+        <a href="tel:+16046777529">(604) 677-7529</a>
+      </div>
+      <div class="footer-side">
+        <div class="direct">
+          <h3 class="f-label">Haylie directly</h3>
+          <a href="mailto:hayliehansen@shaw.ca">hayliehansen@shaw.ca</a>
+        </div>
+        <a class="btn" href="assets/HaylieHansen_Resume.pdf" download><svg><use href="#i-down"/></svg>Download résumé</a>
+        <div class="socials">
+          <a href="https://pro.imdb.com/name/nm16328578/" target="_blank" rel="noopener"><svg><use href="#i-imdb"/></svg>IMDb</a>
+          <a href="https://www.instagram.com/haylie_hansen_/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="colophon"><span>© 2026 Haylie Hansen</span><span class="xo" aria-hidden="true">xoxo</span></div>
+  </div>
+</footer>
+
+<div class="theatre" hidden role="dialog" aria-modal="true" aria-label="Scene player">
+  <button type="button" class="close">Close</button>
+  <figure class="screen">
+    <video playsinline preload="none"></video>
+    <div class="ctrl">
+      <button type="button" class="pp" aria-label="Pause"><svg><use href="#i-pause"/></svg></button>
+      <span class="now-t">0:00</span>
+      <input type="range" class="seek" min="0" max="1000" value="0" aria-label="Seek">
+      <span class="dur-t">0:00</span>
+      <button type="button" class="mute" aria-label="Mute"><svg><use href="#i-sound"/></svg></button>
+    </div>
+  </figure>
+</div>
+
+
+<script>
+  // Phones: pin viewport-sized things (the hero) to the first screen height, in px. In-app browsers (Instagram etc.)
+  // resize the whole viewport, svh included, as their toolbar slides away on scroll, and the hero grew mid-scroll.
+  // Only a width change (rotation) re-measures. Desktop keeps plain svh.
+  (() => { if (!matchMedia('(pointer: coarse)').matches) return;
+    const r = document.documentElement; let w = 0;
+    const pin = () => { if (innerWidth === w) return; w = innerWidth; r.style.setProperty('--screen', innerHeight + 'px'); };
+    pin(); addEventListener('resize', pin); })();
+</script>
+<script>
+(() => {
+  const hero = document.querySelector('.hero');
+  const villain = hero.querySelector('.layer.villain');
+  const knob = hero.querySelector('.seam-knob');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Villain name: each letter knocked slightly off true.
+  let seed = 7;
+  const rand = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  document.querySelectorAll('.jitter').forEach(el => {
+    el.innerHTML = [...el.textContent].map(ch =>
+      `<span style="--r:${(rand() * 9 - 4.5).toFixed(1)}deg;--y:${(rand() * .08 - .04).toFixed(3)}em">${ch}</span>`).join('');
+  });
+
+  // Hero seam
+  let seamPos = 50;
+  const setSeam = (p) => {
+    seamPos = Math.max(0, Math.min(100, p));
+    hero.style.setProperty('--seam', seamPos + '%');
+    villain.style.clipPath = `inset(0 0 0 ${seamPos}%)`;
+    knob.setAttribute('aria-valuenow', Math.round(seamPos));
+  };
+
+  setSeam(50);
+
+  // Dragging the seam
+  let dragging = false;
+  const fromEvent = (e) => { const r = hero.getBoundingClientRect(); setSeam((e.clientX - r.left) / r.width * 100); };
+  knob.addEventListener('pointerdown', e => { dragging = true; knob.setPointerCapture(e.pointerId); });
+  knob.addEventListener('pointermove', e => { if (dragging) fromEvent(e); });
+  knob.addEventListener('pointerup', () => { dragging = false; });
+  knob.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') { setSeam(seamPos - 5); e.preventDefault(); }
+    if (e.key === 'ArrowRight') { setSeam(seamPos + 5); e.preventDefault(); }
+  });
+
+  // The cross-out draws itself once the villain heading is on screen.
+  const struck = document.querySelector('.struck-title');
+  if (reduce || !('IntersectionObserver' in window)) struck.classList.add('drawn');
+  else new IntersectionObserver((es, o) => es.forEach(en => { if (en.isIntersecting) { struck.classList.add('drawn'); o.disconnect(); } }), { threshold: .8 }).observe(struck);
+
+  // Theatre with its own controls (native bars clip on narrow video in Firefox)
+  const th = document.querySelector('.theatre'), vid = th.querySelector('video');
+  const pp = th.querySelector('.pp'), seek = th.querySelector('.seek'), mute = th.querySelector('.mute');
+  const nowT = th.querySelector('.now-t'), durT = th.querySelector('.dur-t');
+  const fmt = s => isFinite(s) ? `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}` : '0:00';
+  const icon = (btn, id) => btn.querySelector('use').setAttribute('href', id);
+  let opener = null;
+  document.querySelectorAll('.scene').forEach(btn => btn.addEventListener('click', () => {
+    opener = btn;
+    th.dataset.shape = btn.dataset.shape;
+    th.classList.toggle('sweet', !!btn.closest('.side.sweet'));
+    vid.poster = btn.querySelector('img').src;
+    vid.src = `assets/video/${btn.dataset.video}.mp4`;
+    th.hidden = false;
+    vid.play().catch(() => {});
+    th.querySelector('.close').focus();
+  }));
+  vid.addEventListener('loadedmetadata', () => { th.style.setProperty('--vr', vid.videoWidth / vid.videoHeight); durT.textContent = fmt(vid.duration); });
+  vid.addEventListener('play', () => { icon(pp, '#i-pause'); pp.setAttribute('aria-label', 'Pause'); });
+  vid.addEventListener('pause', () => { icon(pp, '#i-play'); pp.setAttribute('aria-label', 'Play'); });
+  vid.addEventListener('timeupdate', () => { nowT.textContent = fmt(vid.currentTime); if (vid.duration) seek.value = vid.currentTime / vid.duration * 1000; });
+  pp.addEventListener('click', () => vid.paused ? vid.play() : vid.pause());
+  vid.addEventListener('click', () => vid.paused ? vid.play() : vid.pause());
+  seek.addEventListener('input', () => { if (vid.duration) vid.currentTime = seek.value / 1000 * vid.duration; });
+  mute.addEventListener('click', () => { vid.muted = !vid.muted; icon(mute, vid.muted ? '#i-mute' : '#i-sound'); mute.setAttribute('aria-label', vid.muted ? 'Unmute' : 'Mute'); });
+  const close = () => { vid.pause(); vid.removeAttribute('src'); vid.load(); th.hidden = true; if (opener) opener.focus(); };
+  th.querySelector('.close').addEventListener('click', close);
+  th.addEventListener('click', e => { if (e.target === th) close(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !th.hidden) close(); });
+
+})();
+</script>
+</body>
+</html>
