@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="en" class="has-atmos" data-atmos="dream" data-layout="bands" data-badass="slash">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Haylie Hansen — Actor</title>
+<meta name="description" content="Haylie Hansen, actor. Scenes, credits and casting contact.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Cpath fill=%22%23e3122f%22 d=%22M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.2 0 3.6 1.2 5.3 3.2 1.7-2 3.1-3.2 5.3-3.2 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;500;600&family=Fraunces:ital,opsz,wght,SOFT,WONK@1,9..144,400..700,0..100,0..1&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sugar: #fdeef2;
+    --blush: #f6bccb;
+    --lilac: #9d9ae6;
+    --plum: #3a1b31;
+    --black: #000;
+    --bruise: #24091a;
+    --lipstick: #e3122f;
+    --chalk: #f6f1f1;
+    --sweet-font: 'Fraunces', Georgia, serif;
+    --mean-font: 'Anton', Impact, sans-serif;
+    --scrawl-font: 'Permanent Marker', cursive;
+    --body-font: 'Figtree', system-ui, sans-serif;
+    --wrap: 1240px;
+    --gutter: clamp(16px, 4vw, 48px);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--black); color: var(--chalk); font: 400 17px/1.55 var(--body-font); }
+  /* Nothing may widen the page: before the web fonts land, the fallback serif made the footer's nowrap
+     "Casting & bookings" 20px too wide on phones, which widened the viewport and pinned the hero ~5% too tall. */
+  html, body { overflow-x: clip; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+  :focus-visible { outline: 3px solid var(--lilac); outline-offset: 3px; }
+  .sweet-type { font-family: var(--sweet-font); font-style: italic; font-weight: 560; font-variation-settings: 'SOFT' 100, 'WONK' 1; }
+  .mean-type { font-family: var(--mean-font); font-weight: 400; text-transform: uppercase; letter-spacing: .01em; }
+  .jitter span { display: inline-block; transform: translateY(var(--y, 0)) rotate(var(--r, 0deg)); }
+
+  /* ---------- Hero: two layers of the same face ---------- */
+  .hero { position: relative; height: var(--screen, 100svh); min-height: 560px; overflow: hidden; background: var(--black);
+    --E: calc(var(--screen, 100svh) * .15); --X: 50%; --Y: 36%; }
+  .layer { position: absolute; inset: 0; overflow: hidden; isolation: isolate; }
+  .layer.sweet { background: radial-gradient(ellipse 70% 90% at 50% 40%, #fbe3ea 0%, var(--blush) 70%, #eaa3b7 100%); color: var(--plum); }
+  .layer.villain { background: radial-gradient(ellipse 60% 80% at 50% 45%, #3a0612 0%, #120207 60%, var(--black) 100%); color: var(--chalk); }
+  .face { position: absolute; max-width: none;
+    width: calc(var(--E) / var(--d));
+    left: calc(var(--X) - var(--fx) * var(--E) / var(--d));
+    top: calc(var(--Y) - var(--fy) * var(--ar) * var(--E) / var(--d));
+    -webkit-mask: linear-gradient(to right, transparent 0, #000 22%, #000 78%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 14%, #000 62%, transparent 92%);
+    -webkit-mask-composite: source-in;
+    mask: linear-gradient(to right, transparent 0, #000 22%, #000 78%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 14%, #000 62%, transparent 92%);
+    mask-composite: intersect; }
+  .layer.villain .face { filter: contrast(1.12) saturate(.85) brightness(.88); }
+  .layer.villain::after { content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse calc(var(--E) * 2.4) calc(var(--E) * 3.4) at var(--X) calc(var(--Y) + var(--E) * .5), transparent 30%, rgba(0,0,0,.92) 85%); }
+  .layer.sweet::after { content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse calc(var(--E) * 2.6) calc(var(--E) * 3.6) at var(--X) calc(var(--Y) + var(--E) * .6), transparent 50%, rgba(246,188,203,.55) 100%); }
+
+  .hero-name { position: absolute; inset: 0; margin: 0; z-index: 2; pointer-events: none; font-size: clamp(64px, 9vw, 150px); line-height: .9; }
+  .hero-name > span { position: absolute; top: 50%; transform: translateY(-50%); width: calc(50% - var(--E) * 1.55 - var(--gutter)); }
+  .hero-name .first { left: var(--gutter); text-align: right; }
+  .hero-name .last { right: var(--gutter); text-align: left; }
+  .layer.sweet .hero-name { color: var(--plum); text-shadow: 0 2px 30px rgba(253,238,242,.8); }
+  .layer.villain .hero-name { font-size: clamp(72px, 10.5vw, 172px); color: var(--chalk); text-shadow: .045em .045em 0 var(--lipstick); }
+
+  .corner { position: absolute; bottom: 22px; z-index: 3; font-size: 22px; pointer-events: none; }
+  .corner.sweet { left: var(--gutter); color: var(--plum); }
+  .corner.villain { right: var(--gutter); color: var(--lipstick); font-family: var(--scrawl-font); transform: rotate(-4deg); }
+
+  /* Drag seam */
+  .seam { position: absolute; top: 0; bottom: 0; left: var(--seam, 50%); z-index: 4; width: 0; }
+  .seam::before { content: ''; position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; background: var(--chalk); box-shadow: 0 0 0 1px rgba(0,0,0,.15); }
+  .seam-knob { position: absolute; top: 78%; left: 0; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 6px;
+    padding: 10px 16px; border-radius: 999px; border: 2px solid var(--chalk); background: var(--black); color: var(--chalk);
+    font-weight: 600; font-size: 15px; cursor: ew-resize; touch-action: none; box-shadow: 0 6px 24px rgba(0,0,0,.35); white-space: nowrap; }
+  .seam-knob svg { width: 14px; height: 14px; fill: currentColor; }
+  .seam-knob:hover { background: var(--lipstick); }
+
+  /* ---------- Sides ---------- */
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+  .side { position: relative; padding: clamp(72px, 10vw, 140px) 0; }
+  .side.sweet { background: var(--sugar); color: var(--plum); }
+  .side.villain { background: var(--black); color: var(--chalk); }
+  .side-title { margin: 0 0 clamp(32px, 4vw, 56px); line-height: .95; font-weight: inherit; font-size: clamp(56px, 8vw, 120px); }
+  .side.sweet .side-title { display: flex; align-items: flex-start; gap: .12em; }
+  .side.sweet .side-title svg { width: .38em; height: .38em; margin-top: .1em; fill: none; stroke: var(--lilac); stroke-width: 2.4; stroke-linecap: round; }
+
+  .struck-title { position: relative; display: inline-block; }
+  .struck-title .was { color: rgba(246,241,241,.5); position: relative; display: inline-block; }
+  .struck-title .was svg { position: absolute; left: -4%; top: 6%; width: 108%; height: 90%; overflow: visible; }
+  .struck-title .was path { fill: none; stroke: var(--lipstick); stroke-width: 7; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .struck-title .now { position: absolute; left: 56%; top: -62%; text-shadow: 0 0 2px #000, 0 0 3px #000, 0 0 10px #000, 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000; font-family: var(--scrawl-font); color: var(--lipstick); font-size: .82em; transform: rotate(-7deg) scale(.6); opacity: 0; white-space: nowrap; }
+  .drawn .struck-title .was path { transition: stroke-dashoffset .5s cubic-bezier(.6, 0, .3, 1); stroke-dashoffset: 0; }
+  .drawn .struck-title .was path + path { transition-delay: .35s; }
+  .drawn .struck-title .now { opacity: 1; transform: rotate(-7deg) scale(1); transition: opacity .2s .8s, transform .35s .8s cubic-bezier(.3, 1.6, .5, 1); }
+
+  .side-grid { display: grid; gap: clamp(12px, 1.6vw, 20px); grid-template-columns: 1.5fr 1fr 1fr; }
+  .still { margin: 0; overflow: hidden; border-radius: 4px; }
+  .still img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
+  .side.sweet .still { grid-column: 1; grid-row: 1 / span 2; }
+  .side.sweet .scene.wide { grid-column: 2 / span 2; }
+  .side.villain .side-grid { grid-template-columns: 1fr 1fr 1.5fr; }
+  .side.villain .still { grid-column: 3; grid-row: 1 / span 2; }
+  .side.villain .scene.wide { grid-column: 1 / span 2; }
+
+  .scene { position: relative; display: block; width: 100%; padding: 0; border: 0; border-radius: 4px; overflow: hidden; cursor: pointer; background: #000; text-align: left; }
+  .scene.wide { aspect-ratio: 16 / 9; }
+  .scene.tall { aspect-ratio: 1 / 1; }
+  .scene img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+  .scene[data-pos="face-high"] img { object-position: 50% 30%; }
+  .scene::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.78) 0, rgba(0,0,0,.2) 45%, transparent 70%); }
+  .scene:hover img, .scene:focus-visible img { transform: scale(1.04); }
+  .scene .cap { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 14px 16px; display: flex; align-items: flex-end; gap: 12px; color: #fff; }
+  .scene .play { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; transition: transform .2s; }
+  .scene .play svg { width: 18px; height: 18px; fill: currentColor; margin-left: 3px; }
+  .side.sweet .scene .play { background: var(--blush); color: var(--plum); }
+  .side.villain .scene .play { background: var(--lipstick); color: var(--chalk); }
+  .scene:hover .play { transform: scale(1.1); }
+  .scene strong { display: block; font-weight: 600; font-size: 17px; line-height: 1.2; }
+  .scene small { display: block; font-size: 14px; opacity: .85; }
+  .scene .dur { margin-left: auto; font-size: 14px; font-weight: 600; opacity: .9; }
+
+  /* ---------- The descent: sugar to black ---------- */
+  .side.sweet { --fade: clamp(120px, 16vw, 220px); padding-bottom: var(--fade);
+    background: linear-gradient(to bottom, var(--sugar) calc(100% - var(--fade)), #f0c4d1 calc(100% - var(--fade) / 2), #d98aa4 100%); }
+  .side.villain { --fade: clamp(150px, 20vw, 270px); padding-top: var(--fade);
+    background: linear-gradient(to bottom, #d98aa4 0, #8a2c50 calc(var(--fade) * .3), #3a0f25 calc(var(--fade) * .55), var(--black) calc(var(--fade) * .8)); }
+  .side.villain { padding-bottom: 0; }
+  .xo-divider { margin: 0; padding: clamp(48px, 6vw, 80px) 0 0; text-align: center; font-family: var(--scrawl-font); color: var(--lipstick); font-size: 26px; letter-spacing: .5em; background: var(--black); }
+  .side.villain .still img { filter: brightness(.86) contrast(1.08); }
+
+
+  /* ---------- Credits ---------- */
+  .credits { --c-bg: var(--black); --c-fg: var(--chalk); --c-dim: rgba(246,241,241,.62); --c-rule: rgba(246,241,241,.22); --c-accent: var(--lipstick);
+    background: var(--c-bg); color: var(--c-fg); padding: clamp(48px, 6vw, 80px) 0 clamp(64px, 8vw, 104px); }
+  .credits h2, .footer h2 { margin: 0 0 clamp(28px, 3vw, 44px); font-size: clamp(44px, 6vw, 84px); line-height: 1; }
+  .credit-cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(32px, 5vw, 72px); border-bottom: 1px solid var(--c-rule); }
+  .credit-cols ol { list-style: none; margin: 0; padding: 0; }
+  .credit { display: grid; grid-template-columns: 1fr auto; column-gap: 16px; padding: 16px 0; border-top: 1px solid var(--c-rule); }
+  .credit .t { font-family: var(--sweet-font); font-style: italic; font-weight: 520; font-size: 21px; line-height: 1.25; }
+  .credit .k { color: var(--c-dim); font-size: 15px; }
+  .credit .role { text-align: right; font-weight: 600; font-size: 15px; color: var(--c-accent); white-space: nowrap; }
+  .credit .dir { grid-column: 1 / -1; color: var(--c-dim); font-size: 15px; }
+
+  /* ---------- Footer ---------- */
+  .footer { --c-bg: var(--black); --c-fg: var(--chalk); --c-dim: rgba(246,241,241,.62); --c-rule: rgba(246,241,241,.22); --c-accent: var(--lipstick);
+    position: relative; background: var(--c-bg); color: var(--c-fg); padding: clamp(64px, 9vw, 120px) 0 40px; border-top: 3px solid var(--c-accent); }
+  .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(36px, 6vw, 96px); align-items: start; }
+  .manager .who { font-family: var(--sweet-font); font-style: italic; font-weight: 560; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; margin: 0; }
+  .manager .co { color: var(--c-dim); margin: 4px 0 20px; }
+  .manager a { display: block; width: fit-content; font-size: 19px; text-decoration: none; border-bottom: 2px solid var(--c-accent); margin-bottom: 10px; }
+  .footer-side { display: grid; gap: 22px; }
+  .f-label { margin: 0 0 10px; font-size: 15px; font-weight: 600; color: var(--c-dim); }
+  .direct a { font-size: 19px; text-decoration: none; border-bottom: 2px solid var(--c-accent); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; width: fit-content; padding: 14px 24px; border-radius: 999px; background: var(--c-accent); color: #fff; text-decoration: none; font-weight: 600; }
+  .btn svg { width: 18px; height: 18px; fill: currentColor; }
+  .socials { display: flex; gap: 12px; flex-wrap: wrap; }
+  .socials a { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border: 2px solid var(--c-rule); border-radius: 999px; text-decoration: none; font-weight: 600; }
+  .socials a:hover { border-color: var(--c-accent); }
+  .socials svg { width: 18px; height: 18px; fill: currentColor; }
+  .colophon { margin-top: clamp(56px, 8vw, 96px); display: flex; justify-content: space-between; gap: 16px; color: var(--c-dim); font-size: 14px; }
+  .built-by { display: inline-block; margin-left: 1.1em; padding-left: 1.1em; border-left: 1px solid color-mix(in srgb, currentColor 35%, transparent); font-size: 12px; font-weight: 400; letter-spacing: .02em; text-transform: none; opacity: 0.85; }
+  .built-by a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); }
+  .built-by a:hover { text-decoration-color: currentColor; }
+  @media (max-width: 600px) { .built-by { display: block; margin: 6px 0 0; padding: 0; border: 0; } }
+  .colophon .xo { font-family: var(--scrawl-font); color: var(--c-accent); font-size: 20px; transform: rotate(-4deg); }
+
+  /* ---------- Theatre ---------- */
+  .theatre { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 16px; background: rgba(0,0,0,.92); }
+  .theatre[hidden] { display: none; }
+  .theatre.sweet { background: rgba(42,14,34,.95); }
+  .screen { margin: 0; display: grid; gap: 10px; }
+  .screen video { display: block; background: #000; border-radius: 4px; }
+  .theatre[data-shape="land"] video { width: min(92vw, 1100px, calc((var(--screen, 100svh) * .86 - 60px) * var(--vr, 1.77))); height: auto; }
+  .theatre[data-shape="tall"] video { height: calc(var(--screen, 100svh) * .86 - 60px); width: auto; max-width: 92vw; }
+  .ctrl { display: flex; align-items: center; gap: 10px; color: #fff; font-size: 14px; font-variant-numeric: tabular-nums; }
+  .ctrl button { flex: none; width: 42px; height: 42px; border-radius: 50%; border: 0; background: var(--t-accent, var(--lipstick)); color: #fff; display: grid; place-items: center; cursor: pointer; }
+  .theatre.sweet { --t-accent: #c45c86; }
+  .ctrl svg { width: 16px; height: 16px; fill: currentColor; }
+  .ctrl input { flex: 1; min-width: 60px; accent-color: var(--t-accent, var(--lipstick)); }
+  .close { position: absolute; top: 16px; right: 16px; padding: 10px 18px; border-radius: 999px; border: 2px solid #fff; background: transparent; color: #fff; font-weight: 600; cursor: pointer; }
+
+  /* ================= v2: depth, featured, prints, modelling, fans & socials ================= */
+  /* Film grain over everything: the back layer's texture */
+  body::after { content: ''; position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: .07;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1.4 -.2'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  /* Lift: layered shadows (contact, near, far) instead of one flat blur */
+  :root { --lift-1: 0 1px 2px rgba(40,10,30,.18), 0 6px 14px rgba(40,10,30,.14), 0 22px 44px rgba(40,10,30,.16);
+    --lift-2: 0 2px 4px rgba(40,10,30,.2), 0 14px 28px rgba(40,10,30,.2), 0 38px 70px rgba(40,10,30,.24);
+    --lift-dark: 0 1px 2px rgba(0,0,0,.6), 0 10px 22px rgba(0,0,0,.55), 0 30px 60px rgba(0,0,0,.6); }
+
+  /* Back-layer decor inside each side: soft blobs + faint doodles, slow parallax */
+  .side > .wrap, .model > .wrap { position: relative; z-index: 1; }
+  .decor { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(70px); will-change: transform; }
+  .side.sweet .b1 { width: 46vw; height: 46vw; max-width: 620px; max-height: 620px; left: -12%; top: 4%; background: rgba(157,154,230,.32); }
+  .side.sweet .b2 { width: 34vw; height: 34vw; max-width: 480px; max-height: 480px; right: -8%; top: 30%; background: rgba(246,188,203,.7); }
+  .side.sweet .b3 { width: 30vw; height: 30vw; max-width: 420px; max-height: 420px; left: 30%; bottom: 14%; background: rgba(255,255,255,.75); }
+  .side.villain .b1 { width: 44vw; height: 44vw; max-width: 600px; max-height: 600px; right: -14%; top: 22%; background: rgba(227,18,47,.2); }
+  .side.villain .b2 { width: 36vw; height: 36vw; max-width: 500px; max-height: 500px; left: -12%; bottom: 0; background: rgba(120,10,40,.3); }
+  .doodle { position: absolute; fill: none; stroke-width: 1.6; stroke-linecap: round; will-change: transform; }
+  .side.sweet .doodle { stroke: rgba(58,27,49,.13); }
+  .side.villain .doodle { stroke: rgba(246,241,241,.07); }
+
+  /* Scene cards: lifted, with a hairline inner edge so they read as objects */
+  .scene { box-shadow: var(--lift-1); transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s; }
+  .scene::before { content: ''; position: absolute; inset: 0; z-index: 2; border-radius: inherit; pointer-events: none; box-shadow: inset 0 0 0 1px rgba(255,255,255,.18); }
+  .scene:hover { transform: translateY(-4px); box-shadow: var(--lift-2); }
+  .side.villain .scene, .side.villain .still { box-shadow: var(--lift-dark); }
+  .side.villain .scene:hover { box-shadow: var(--lift-dark), 0 0 0 1px rgba(227,18,47,.6), 0 0 40px rgba(227,18,47,.25); }
+  .still { box-shadow: var(--lift-1); }
+  .scene .play { box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+
+  /* ---------- Featured: three posters breaking out of a plum band onto the sugar below ---------- */
+  .featured { position: relative; isolation: isolate; overflow: clip; background: var(--sugar); color: var(--plum);
+    padding: clamp(56px, 7vw, 96px) 0 clamp(28px, 3vw, 44px); }
+  .feat-title { margin: 0 0 clamp(28px, 3.4vw, 48px); text-align: center; font-size: clamp(44px, 6vw, 84px); line-height: 1; color: var(--chalk); text-shadow: 0 2px 24px rgba(0,0,0,.4); }
+  .feat-grid { --gap: clamp(12px, 3vw, 48px); --pw: min(260px, (100vw - 2 * var(--gutter) - 2 * var(--gap)) / 3);
+    position: relative; display: grid; grid-template-columns: repeat(3, var(--pw)); justify-content: center; gap: var(--gap); }
+  /* the band ends 60% of the way down the posters, so they hang over its edge */
+  .feat-grid::before { content: ''; position: absolute; z-index: -1; left: 50%; width: 100vw; translate: -50% 0; bottom: calc(100% - var(--pw) * 1.5 * .6); height: 2000px;
+    background: radial-gradient(ellipse 40% 60% at 22% 85%, rgba(227,18,47,.28), transparent 70%), radial-gradient(ellipse 40% 60% at 80% 80%, rgba(157,154,230,.3), transparent 70%), linear-gradient(to bottom, #12040d, #2a0d22 70%, #3a1430);
+    box-shadow: 0 1px 0 rgba(255,255,255,.08); }
+  .feat { display: grid; gap: 4px; align-content: start; }
+  .poster { position: relative; display: block; width: 100%; aspect-ratio: 2 / 3; padding: 0; border: 0; border-radius: 6px; overflow: hidden; cursor: pointer; background: #000;
+    transform: rotate(var(--t, 0deg)); box-shadow: 0 2px 4px rgba(0,0,0,.4), 0 18px 36px rgba(0,0,0,.4), 0 46px 80px rgba(40,10,30,.35); transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s; }
+  .poster::after { content: ''; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(255,255,255,.22); background: linear-gradient(120deg, rgba(255,255,255,.16), transparent 40%); pointer-events: none; }
+  .poster img { width: 100%; height: 100%; object-fit: cover; }
+  .poster:hover, .poster:focus-visible { transform: rotate(0deg) translateY(-8px) scale(1.02); }
+  .poster .watch { position: absolute; z-index: 1; left: 50%; bottom: 12px; translate: -50% 0; display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px;
+    background: var(--lipstick); color: #fff; font-weight: 600; font-size: 14px; white-space: nowrap; box-shadow: 0 6px 18px rgba(0,0,0,.45); }
+  .poster .watch svg { width: 13px; height: 13px; fill: currentColor; }
+  .feat h3 { margin: 18px 0 0; font-family: var(--sweet-font); font-style: italic; font-weight: 560; font-size: clamp(17px, 1.7vw, 23px); line-height: 1.2; }
+  .feat p { margin: 0; font-size: 15px; color: rgba(58,27,49,.75); }
+  .feat p b { color: var(--plum); font-weight: 600; }
+  .feat p i { font-style: normal; }
+  .featured + .sides .side.sweet { padding-top: clamp(48px, 6vw, 88px); }
+
+  /* ---------- Prints: extra photos as taped prints under each side's scenes ---------- */
+  .prints { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3.4vw, 52px); margin-top: clamp(48px, 6vw, 88px); }
+  .print { position: relative; display: block; padding: 10px 10px 34px; border: 0; cursor: zoom-in; background: #fffdfd; border-radius: 2px;
+    transform: rotate(var(--t, 0deg)); box-shadow: var(--lift-1); transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s; }
+  .print img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 25%; }
+  .print:hover, .print:focus-visible { transform: rotate(0deg) translateY(-6px); box-shadow: var(--lift-2); }
+  .print::before { content: ''; position: absolute; z-index: 1; top: -12px; left: 50%; width: 84px; height: 26px; translate: -50% 0; rotate: var(--tape, -3deg);
+    background: rgba(157,154,230,.55); box-shadow: 0 1px 2px rgba(0,0,0,.1); -webkit-mask: linear-gradient(90deg, transparent 0 2px, #000 2px calc(100% - 2px), transparent 0); }
+  .side.villain .print { background: #141414; box-shadow: var(--lift-dark); }
+  .side.villain .print::before { background: rgba(40,40,40,.92); width: 70px; }
+  .side.villain .print:hover { box-shadow: var(--lift-dark), 0 0 36px rgba(227,18,47,.28); }
+  .side.villain .print img { filter: brightness(.9) contrast(1.06); }
+  .scrawl-note { position: absolute; z-index: 2; font-family: var(--scrawl-font); color: var(--lipstick); font-size: clamp(24px, 2.4vw, 34px); pointer-events: none; white-space: nowrap;
+    text-shadow: 0 0 2px #000, 0 0 8px #000; }
+  .scrawl-note svg { position: absolute; fill: none; stroke: var(--lipstick); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  .bite-note { top: -58px; left: 19%; transform: rotate(-6deg); }
+  .bite-note svg { width: 54px; height: 46px; left: 100%; top: 14px; }
+
+  /* ---------- Modelling: a lit studio sweep, prints standing off the paper ---------- */
+  .model { --paper: #ece6e3; position: relative; color: var(--plum);
+    padding: clamp(150px, 16vw, 230px) 0 clamp(150px, 16vw, 230px);
+    background:
+      radial-gradient(ellipse 60% 45% at 50% 34%, rgba(255,255,255,.75), transparent 70%),
+      linear-gradient(to bottom, var(--black) 0, #3b3533 clamp(50px, 5vw, 80px), #c9c1be clamp(110px, 12vw, 170px), var(--paper) clamp(150px, 16vw, 230px),
+        var(--paper) 72%, #d8d0cc calc(100% - clamp(150px, 16vw, 230px)), #6b6260 calc(100% - clamp(60px, 7vw, 100px)), var(--black) 100%); }
+  .model-title { position: relative; margin: 0 0 clamp(36px, 4.6vw, 64px); font-family: var(--mean-font); font-weight: 400; text-transform: uppercase; letter-spacing: .04em;
+    font-size: clamp(60px, 10vw, 156px); line-height: .9; color: transparent; -webkit-text-stroke: 2px var(--plum); }
+  .model-title::before { content: attr(data-text); position: absolute; inset: 0; z-index: -1; color: var(--blush); -webkit-text-stroke: 0; transform: translate(.05em, .05em); }
+  .model-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 2vw, 26px); }
+  .look { position: relative; display: block; padding: 0; border: 0; cursor: zoom-in; background: #ddd; aspect-ratio: 4 / 5; border-radius: 3px; overflow: hidden;
+    box-shadow: 0 1px 2px rgba(60,40,40,.25), 0 10px 22px rgba(60,40,40,.18), 0 30px 50px -10px rgba(60,40,40,.3); transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s; }
+  .look.lead { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+  .look img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; transition: transform .6s ease; }
+  .look::after { content: ''; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(255,255,255,.25); pointer-events: none; }
+  .look:hover, .look:focus-visible { transform: translateY(-6px); box-shadow: 0 2px 4px rgba(60,40,40,.25), 0 18px 34px rgba(60,40,40,.22), 0 46px 70px -10px rgba(60,40,40,.38); }
+  .look:hover img { transform: scale(1.03); }
+  .look .tag { position: absolute; z-index: 1; left: 10px; bottom: 10px; padding: 5px 11px; border-radius: 999px; background: rgba(255,253,253,.9); color: var(--plum);
+    font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; box-shadow: 0 3px 10px rgba(0,0,0,.18); }
+  .xo-mark { margin: 0 0 clamp(28px, 4vw, 52px); text-align: center; font-family: var(--scrawl-font); color: var(--lipstick); font-size: 26px; letter-spacing: .5em; }
+
+  /* ---------- Fans & socials: fanned prints, after credits ---------- */
+  .fans { position: relative; padding: clamp(56px, 7vw, 96px) 0 clamp(48px, 5vw, 72px); color: var(--chalk);
+    background: radial-gradient(ellipse 50% 70% at 15% 30%, rgba(227,18,47,.16), transparent 70%), radial-gradient(ellipse 45% 70% at 90% 70%, rgba(157,154,230,.14), transparent 70%), linear-gradient(to bottom, var(--black), var(--bruise) 30%, var(--bruise) 85%, #12040d); }
+  .fans h2 { margin: 0 0 clamp(28px, 3vw, 44px); font-size: clamp(40px, 5vw, 72px); line-height: 1; }
+  .fan-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 3.4vw, 52px); max-width: 1080px; }
+  .fan { display: grid; gap: 14px; text-decoration: none; color: inherit; }
+  .fan-pics { position: relative; display: block; aspect-ratio: 5 / 4; }
+  .fan-pics img { position: absolute; top: 6%; left: 29%; width: 42%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 25%; border: 4px solid #fbf6f4; border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.4), 0 12px 28px rgba(0,0,0,.55); transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+  .fan-pics img:nth-child(1) { transform: translateX(-46%) rotate(-10deg); }
+  .fan-pics img:nth-child(2) { z-index: 1; transform: translateY(-3%); }
+  .fan-pics img:nth-child(3) { transform: translateX(46%) rotate(9deg); }
+  .fan:hover .fan-pics img:nth-child(1) { transform: translateX(-66%) rotate(-15deg) translateY(4%); }
+  .fan:hover .fan-pics img:nth-child(2) { transform: translateY(-9%) scale(1.04); }
+  .fan:hover .fan-pics img:nth-child(3) { transform: translateX(66%) rotate(14deg) translateY(4%); }
+  .fan-txt { display: grid; gap: 3px; }
+  .fan-txt b { display: flex; align-items: center; gap: 9px; font-family: var(--sweet-font); font-style: italic; font-weight: 560; font-size: 25px; line-height: 1.15; }
+  .fan-txt b svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; stroke-linecap: round; opacity: .8; }
+  .fan-txt small { font-size: 14.5px; color: rgba(246,241,241,.66); }
+  .fan-txt em { margin-top: 6px; width: fit-content; font-style: normal; font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--lipstick); border-bottom: 2px solid currentColor; }
+  .fan-txt em::after { content: " \2192"; display: inline-block; transition: translate .25s; }
+  .fan:hover em::after { translate: 5px 0; }
+  .fan .short { display: none; }
+
+  /* ---------- Footer: two managers as raised cards ---------- */
+  .footer { background: radial-gradient(ellipse 60% 50% at 20% 0, rgba(227,18,47,.12), transparent 70%), var(--black); }
+  .rep-cards { display: grid; grid-template-columns: minmax(0, 420px); gap: 16px; }
+  .rep { position: relative; padding: 22px 22px 14px; border-radius: 14px; border: 1px solid var(--c-rule); background: linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.015));
+    box-shadow: 0 1px 0 rgba(255,255,255,.06) inset, 0 18px 40px rgba(0,0,0,.5); }
+  .rep .where { display: inline-block; margin-bottom: 12px; padding: 4px 10px; border-radius: 999px; background: rgba(246,241,241,.08); font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--c-dim); }
+  .rep .who { font-size: clamp(26px, 2.6vw, 34px); }
+  .rep .co { margin-bottom: 16px; }
+  .rep a { font-size: 17px; }
+  .btn { box-shadow: 0 8px 24px rgba(227,18,47,.35); }
+
+  /* ---------- Lightbox for prints and looks ---------- */
+  .lightbox { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 56px 64px; background: rgba(10,2,8,.94); }
+  .lightbox[hidden] { display: none; }
+  .lightbox img { max-width: 100%; max-height: calc(var(--screen, 100svh) - 112px); border-radius: 4px; box-shadow: 0 30px 80px rgba(0,0,0,.7); }
+  .lb-nav { position: absolute; top: 50%; translate: 0 -50%; width: 48px; height: 48px; border-radius: 50%; border: 2px solid #fff; background: rgba(0,0,0,.4); color: #fff; font-size: 24px; line-height: 1; cursor: pointer; }
+  .lb-nav.prev { left: 12px; } .lb-nav.next { right: 12px; }
+
+  /* ================= v3: badass title options, atmosphere behind the page ================= */
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .badass-title { position: relative; }
+  .bt { display: none; }
+  .bt-slash { display: inline-block; }
+
+  /* A: Slash. "Sweetheart" is cut along a red-hot line, the halves slide apart, BADASS slams into the gap */
+  .bt-slash { position: relative; padding: .12em 0 .08em; }
+  .sl-word { position: relative; display: inline-block; color: var(--chalk); }
+  .sl-half { display: block; transition: translate .6s cubic-bezier(.2,.9,.2,1) .3s, rotate .6s cubic-bezier(.2,.9,.2,1) .3s, color .6s .3s; }
+  .sl-half.a { clip-path: polygon(-6% -30%, 106% -30%, 106% 30.4%, -6% 72%); }
+  .sl-half.b { position: absolute; inset: 0; clip-path: polygon(-6% 72%, 106% 30.4%, 106% 130%, -6% 130%); }
+  .drawn .sl-half { color: rgba(246,241,241,.26); }
+  .drawn .sl-half.a { translate: -.07em -.13em; rotate: -1.6deg; }
+  .drawn .sl-half.b { translate: .08em .15em; rotate: 1deg; }
+  .sl-cut { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none;
+    filter: drop-shadow(0 0 3px #ff2a48) drop-shadow(0 0 12px rgba(227,18,47,.9)); clip-path: inset(-50% 106% -50% -6%); transition: clip-path .3s cubic-bezier(.7,0,.3,1); }
+  .sl-cut line { stroke-linecap: round; vector-effect: non-scaling-stroke; }
+  .sl-cut .glow { stroke: var(--lipstick); stroke-width: 6; }
+  .sl-cut .core { stroke: #fff4f4; stroke-width: 1.6; }
+  .drawn .sl-cut { clip-path: inset(-50% -6% -50% -6%); }
+  .sl-new { position: absolute; left: 50%; top: 50%; translate: -50% -48%; rotate: -4deg; font-family: var(--mean-font); font-style: normal; text-transform: uppercase;
+    font-size: 1.14em; line-height: 1; letter-spacing: .02em; white-space: nowrap; color: var(--chalk); text-shadow: .05em .05em 0 var(--lipstick), 0 0 .4em rgba(0,0,0,.7);
+    opacity: 0; scale: 1.7; filter: blur(8px); transition: opacity .16s .62s, scale .42s .62s cubic-bezier(.2,1.4,.4,1), filter .3s .62s; }
+  .drawn .sl-new { opacity: 1; scale: 1; filter: blur(0); }
+
+  /* ---------- Atmosphere: fixed back layer; the page scrolls over it, its planes drift at a fraction of the speed ---------- */
+  .atmos { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; display: none; }
+  .has-atmos .atmos { display: block; }
+  .has-atmos .hero, .has-atmos main, .has-atmos .footer { position: relative; z-index: 1; }
+  .atmos .set { position: absolute; inset: 0; }
+  .atmos .set.mean { opacity: var(--dark, 0); }
+  .atmos .back { position: absolute; inset: 0; }
+  .atmos .plane { position: absolute; left: 0; right: 0; top: 0; will-change: transform; }
+  .atmos .plane > * { position: absolute; }
+  .atmos .orb { border-radius: 50%; translate: -50% -50%; background: radial-gradient(circle closest-side, var(--c), transparent); }
+  .atmos .ring { border-radius: 50%; translate: -50% -50%; background: radial-gradient(circle closest-side, transparent 56%, var(--c) 76%, transparent); }
+  .atmos .haze { border-radius: 50%; translate: -50% -50%; background: radial-gradient(closest-side, var(--c), transparent); }
+  .atmos .spk, .atmos .hrt { translate: -50% -50%; color: var(--c); }
+  .atmos .spk svg { display: block; width: 100%; fill: currentColor; }
+  .atmos .hrt svg { display: block; width: 100%; fill: none; stroke: currentColor; stroke-width: 1.6; }
+  .atmos .tw { animation: twinkle var(--tw, 4s) ease-in-out var(--td, 0s) infinite alternate; }
+  @keyframes twinkle { from { opacity: 1; } to { opacity: .2; } }
+  .atmos .emb { border-radius: 50%; translate: -50% -50%; background: #ff6a4d; box-shadow: 0 0 6px 2px rgba(255,50,40,.55), 0 0 18px 4px rgba(227,18,47,.25); }
+  .atmos .word { translate: 0 -50%; white-space: nowrap; line-height: .9; }
+  .atmos .w-sweet { font-family: var(--sweet-font); font-style: italic; font-weight: 600; font-variation-settings: 'SOFT' 100, 'WONK' 1; }
+  .atmos .w-mean { font-family: var(--mean-font); text-transform: uppercase; }
+  .atmos .ghost { max-width: none; translate: -50% -50%; -webkit-mask: radial-gradient(closest-side, #000 50%, transparent); mask: radial-gradient(closest-side, #000 50%, transparent); }
+  .atmos .set.sweet .ghost { filter: grayscale(1) contrast(1.15); mix-blend-mode: multiply; opacity: .34; }
+  .atmos .set.mean .ghost { filter: url(#duo-red) contrast(1.3); opacity: .42; }
+  .atmos .beams { position: absolute; inset: 0; }
+  .atmos .beam { position: absolute; top: -8%; left: var(--x); width: min(36vw, 540px); height: 125%; translate: -50% 0; transform-origin: 50% 0; rotate: var(--a);
+    background: linear-gradient(to bottom, var(--c), transparent 85%); clip-path: polygon(45% 0, 55% 0, 100% 100%, 0 100%); filter: blur(16px);
+    animation: sway var(--sp, 11s) ease-in-out infinite alternate; }
+  @keyframes sway { from { rotate: calc(var(--a) - 7deg); } to { rotate: calc(var(--a) + 7deg); } }
+  .dream-s { background: radial-gradient(ellipse 80% 60% at 18% 20%, rgba(157,154,230,.38), transparent 70%), radial-gradient(ellipse 70% 60% at 85% 75%, rgba(255,255,255,.6), transparent 70%), linear-gradient(to bottom, #fbe3ea, #f6bccb 70%, #eea8bf); }
+  .dream-m { background: radial-gradient(ellipse 70% 60% at 50% 35%, #3a0612, #120207 60%, #000); }
+  .stage-s { background: repeating-linear-gradient(90deg, rgba(120,30,60,.08) 0, rgba(255,255,255,.08) 38px, rgba(120,30,60,.08) 76px), linear-gradient(to bottom, #f7d0db, #e7a2b8); }
+  .stage-m { background: repeating-linear-gradient(90deg, rgba(0,0,0,.6) 0, rgba(90,4,24,.4) 38px, rgba(0,0,0,.6) 76px), radial-gradient(ellipse 80% 50% at 50% 0, #3a0612, #050002 70%); }
+  .type-s { background: radial-gradient(ellipse 70% 50% at 80% 30%, rgba(157,154,230,.2), transparent 70%), linear-gradient(to bottom, #fdeef2, #f7cfdb); }
+  .type-m { background: radial-gradient(ellipse 80% 70% at 50% 40%, #1c0611, #050103); }
+  .face-s { background: linear-gradient(to bottom, #fbe3ea, #f0b0c4); }
+  .face-m { background: radial-gradient(ellipse 70% 60% at 40% 40%, #12030a, #020001); }
+
+  /* Windows: which sections let the atmosphere through. Panels draw their own paper in ::before so edges can be shaped. */
+  .has-atmos .featured { background: transparent; padding-bottom: clamp(64px, 9vw, 130px); }
+  .has-atmos .featured + .sides .side.sweet { padding-top: clamp(64px, 7vw, 100px); }
+  .has-atmos .side.villain { background: transparent; padding-top: clamp(110px, 14vw, 200px); padding-bottom: clamp(80px, 10vw, 150px); }
+  .has-atmos .side.sweet { padding-bottom: clamp(72px, 10vw, 140px); }
+  .has-atmos .model { padding: clamp(96px, 11vw, 160px) 0; }
+  .has-atmos .fans { background: transparent; padding: clamp(96px, 12vw, 180px) 0 clamp(96px, 12vw, 170px); }
+  .has-atmos .fans h2, .has-atmos .side.villain .side-title { text-shadow: 0 2px 30px rgba(0,0,0,.6); }
+  .has-atmos :is(.side.sweet, .model, .credits), .has-atmos[data-layout="cards"] .side.villain { position: relative; isolation: isolate; background: transparent; }
+  .has-atmos :is(.side.sweet, .model, .credits)::before, .has-atmos[data-layout="cards"] .side.villain::before,
+  .has-atmos[data-layout="torn"] :is(.side.sweet, .model, .credits)::after {
+    content: ''; position: absolute; inset: 0; z-index: -1; background: var(--pbg); }
+  .has-atmos .side.sweet { --pbg: radial-gradient(ellipse 70% 40% at 50% 0, #fff8fa, transparent 70%), var(--sugar); }
+  .has-atmos .side.villain { --pbg: radial-gradient(ellipse 60% 50% at 82% 20%, rgba(227,18,47,.2), transparent 70%), #060104; }
+  .has-atmos .model { background: none; --pbg: radial-gradient(ellipse 60% 45% at 50% 34%, rgba(255,255,255,.75), transparent 70%), linear-gradient(to bottom, #c9c1be, var(--paper) 16%, var(--paper) 80%, #cfc6c2); }
+  .credits { border-bottom: 3px solid var(--lipstick); } /* frames the socials window with the footer's red top bar */
+  .has-atmos .credits { --pbg: radial-gradient(ellipse 50% 60% at 90% 0, rgba(227,18,47,.12), transparent 70%), #000; }
+  /* 1: Bands, full-width sheets with a soft shadow on the window side */
+  .has-atmos[data-layout="bands"] :is(.side.sweet, .model, .credits)::before { box-shadow: 0 0 60px rgba(0,0,0,.35); }
+  /* 2: Floating cards, rounded panels with atmosphere all around them */
+  .has-atmos[data-layout="cards"] { --cx: max(10px, calc(50% - var(--wrap) / 2 - 10px)); }
+  .has-atmos[data-layout="cards"] :is(.side.sweet, .side.villain, .model, .credits) { margin: clamp(40px, 7vw, 110px) 0; }
+  .has-atmos[data-layout="cards"] :is(.side.sweet, .side.villain, .model, .credits)::before { inset: 0 var(--cx); border-radius: clamp(18px, 2.4vw, 34px);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.1), 0 2px 6px rgba(0,0,0,.2), 0 30px 80px rgba(0,0,0,.4); }
+  .has-atmos[data-layout="cards"] :is(.side.sweet, .side.villain, .model, .credits) > .wrap { padding: 0 calc(var(--gutter) + 12px); }
+  .has-atmos[data-layout="cards"] .decor { inset: 0 var(--cx); border-radius: clamp(18px, 2.4vw, 34px); }
+  .has-atmos[data-layout="cards"] .side.villain { padding-top: clamp(72px, 10vw, 140px); }
+  /* 3: Torn paper, sheets with ripped top and bottom edges (masks built in JS), a dark copy underneath as the paper's shadow */
+  .has-atmos[data-layout="torn"] :is(.side.sweet, .model, .credits) { margin: 18px 0; }
+  .has-atmos[data-layout="torn"] :is(.side.sweet, .model, .credits)::before,
+  .has-atmos[data-layout="torn"] :is(.side.sweet, .model, .credits)::after {
+    -webkit-mask: var(--tear-t) left top / 640px 26px repeat-x, linear-gradient(#000 0 0) 0 25px / 100% calc(100% - 50px) no-repeat, var(--tear-b) left bottom / 640px 26px repeat-x;
+    mask: var(--tear-t) left top / 640px 26px repeat-x, linear-gradient(#000 0 0) 0 25px / 100% calc(100% - 50px) no-repeat, var(--tear-b) left bottom / 640px 26px repeat-x; }
+  .has-atmos[data-layout="torn"] :is(.side.sweet, .model, .credits)::after { z-index: -2; background: rgba(20,4,12,.4); translate: 0 7px; }
+  .has-atmos[data-layout="torn"] .credits.credits::after { background: rgba(227,18,47,.35); }
+
+
+  /* ---------- Phones ---------- */
+  @media (max-width: 760px) {
+    .feat-grid { --gap: 12px; }
+    .poster .watch { padding: 7px 10px; font-size: 12px; gap: 5px; bottom: 8px; }
+    .poster .watch span { display: none; }
+    .feat h3 { margin-top: 12px; font-size: 15px; }
+    .feat p { font-size: 12.5px; line-height: 1.35; }
+    .feat p i { display: none; }
+    .prints { gap: 12px; margin-top: 40px; }
+    .print { padding: 5px 5px 16px; }
+    .print::before { width: 46px; height: 16px; top: -8px; }
+    .bite-note { top: -44px; left: 8%; font-size: 18px; }
+    .bite-note svg { width: 36px; height: 34px; top: 12px; }
+    .model-title { -webkit-text-stroke-width: 1.5px; }
+    .model-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .look .tag { font-size: 10px; padding: 4px 8px; left: 7px; bottom: 7px; }
+    .rep-cards { grid-template-columns: 1fr; }
+    .lightbox { padding: 56px 8px; }
+    .lb-nav { top: auto; bottom: 10px; translate: none; }
+    .fan .short { display: block; } .fan .long { display: none; }
+    .fan-txt b { font-size: 21px; } .fan-txt small { font-size: 13px; }
+    .fan-grid { grid-template-columns: 1fr; row-gap: 30px; }
+    .fan { grid-template-columns: 46% 1fr; align-items: center; gap: 18px; }
+    .has-atmos[data-layout="cards"] { --cx: 8px; }
+    .has-atmos[data-layout="cards"] :is(.side.sweet, .side.villain, .model, .credits) > .wrap { padding: 0 calc(var(--gutter) + 6px); }
+  }
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    .hero { --E: calc(var(--screen, 100svh) * .13); --Y: 33%; }
+    /* first name in the left half, last name in the right, so the seam runs between them, not through a word */
+    .hero-name > span { top: auto; bottom: 9%; transform: none; width: calc(50% - var(--gutter) - 12px); }
+    .hero-name .first { left: var(--gutter); text-align: right; }
+    .hero-name .last { right: var(--gutter); text-align: left; }
+    .seam-knob { top: 54%; }
+    .hero-name > span { white-space: nowrap; }
+    .hero-name { font-size: 12.4vw; }
+    .layer.villain .hero-name { font-size: 13vw; }
+    .corner { display: none; }
+    .side-grid, .side.villain .side-grid { grid-template-columns: 1fr 1fr; }
+    .side .still, .side.sweet .still, .side.villain .still { grid-column: 1 / -1; grid-row: auto; aspect-ratio: 4 / 5; }
+    .side .scene.wide, .side.sweet .scene.wide, .side.villain .scene.wide { grid-column: 1 / -1; }
+    .side.villain .still { order: -1; }
+    .scene .play { width: 40px; height: 40px; }
+    .scene.tall { aspect-ratio: 4 / 5; }
+    .scene.tall .cap { padding: 10px; gap: 8px; }
+    .scene.tall .play { width: 34px; height: 34px; }
+    .scene.tall strong { font-size: 14px; }
+    .scene.tall small { font-size: 12px; }
+    .credit-cols { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer h2 { font-size: 10vw; white-space: nowrap; }
+    .side.sweet { --fade: 56px; }
+    .side.villain { --fade: 96px; }
+    .colophon { flex-direction: column; }
+    /* 320px phones: the slash title's BADASS (1.14em, nowrap) ran 11px past the screen and widened the page */
+    .side-title { font-size: min(56px, 15vw); }
+  }
+  /* touch screens (phones + iPads): contact links get an invisible 44px-tall hit area, the underline stays put */
+  @media (pointer: coarse) {
+    .manager a, .direct a { position: relative; }
+    .manager a::after, .direct a::after { content: ""; position: absolute; inset: -9px -8px -10px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3.5v17l14-8.5z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6 3h4v18H6zM14 3h4v18h-4z"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm18.4 6L19 12.6 21.4 10 20 8.6 17.6 11 15.2 8.6 13.8 10l2.4 2.6-2.4 2.4 1.4 1.4 2.4-2.4 2.4 2.4z"/></symbol>
+  <symbol id="i-arrows" viewBox="0 0 24 24"><path d="M9 5 2 12l7 7V5zm6 0v14l7-7-7-7z"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M11 3h2v13.2l4.6-4.6 1.4 1.4-7 7-7-7 1.4-1.4 4.6 4.6z"/></symbol>
+  <symbol id="i-imdb" viewBox="0 0 24 24"><path d="M2 5h20v14H2zm2.5 3v8h1.8V8zm3 0v8h1.6v-5l.9 5h1.1l.9-5v5h1.6V8h-2.3l-.7 4.2L9.8 8zm7.3 0v8h2.1c1.4 0 2-.6 2-2v-4c0-1.4-.6-2-2-2zm1.8 1.4c.4 0 .5.2.5.6v4c0 .4-.1.6-.5.6z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.3-3.3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></symbol>
+  <!-- Red duotone for the badass ghost portrait: brightness becomes red -->
+  <filter id="duo-red" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values=".35 .55 .1 0 0  .05 .08 .02 0 0  .07 .12 .03 0 0  0 0 0 1 0"/></filter>
+</svg>
+
+<!-- Atmosphere: fixed behind the page; built by script for the chosen option -->
+<div class="atmos" aria-hidden="true"></div>
+
+
+<header class="hero">
+  <div class="layer sweet">
+    <img class="face" src="assets/photos/sweet-cardigan.webp" alt="Haylie Hansen smiling, in a lilac cardigan" style="--fx:.4945;--fy:.2924;--d:.2137;--ar:1.3953">
+    <h1 class="hero-name sweet-type"><span class="first">Haylie</span><span class="last">Hansen</span></h1>
+    <span class="corner sweet sweet-type">Sweetheart</span>
+  </div>
+  <div class="layer villain">
+    <img class="face" src="assets/photos/villain-lace.webp" alt="Haylie Hansen smirking, in black lace" style="--fx:.5154;--fy:.3168;--d:.1639;--ar:1.540">
+    <p class="hero-name mean-type" aria-hidden="true"><span class="first jitter">Haylie</span><span class="last jitter">Hansen</span></p>
+    <span class="corner villain">badass</span>
+  </div>
+  <div class="seam">
+    <button type="button" class="seam-knob" role="slider" aria-label="Sweetheart or badass" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><svg><use href="#i-arrows"/></svg>Drag</button>
+  </div>
+</header>
+
+<main>
+  <section class="featured" id="featured" aria-labelledby="feat-title">
+    <div class="wrap">
+      <h2 class="feat-title sweet-type" id="feat-title">Featured</h2>
+      <div class="feat-grid">
+        <article class="feat">
+          <button type="button" class="poster" style="--t:-2.2deg" data-video="mtt-office" data-shape="tall" data-tone="sweet" aria-label="Play a scene from Mafia's Tender Torture">
+            <img srcset="assets/featured/mtt-400.webp 400w, assets/featured/mtt.webp 700w" sizes="(max-width: 760px) 30vw, 275px" src="assets/featured/mtt.webp" alt="Mafia's Tender Torture poster">
+            <span class="watch"><svg><use href="#i-play"/></svg><span>Watch scene</span></span>
+          </button>
+          <h3>Mafia's Tender Torture</h3>
+          <p><b>Lead</b> · 161.8M plays<i> on StardustTV</i></p>
+        </article>
+        <article class="feat">
+          <button type="button" class="poster" style="--t:1.4deg" data-video="heretic" data-shape="land" data-tone="mean" aria-label="Play a scene from Heretic">
+            <img srcset="assets/featured/heretic-400.webp 400w, assets/featured/heretic.webp 700w" sizes="(max-width: 760px) 30vw, 275px" src="assets/featured/heretic.webp" alt="Heretic poster">
+            <span class="watch"><svg><use href="#i-play"/></svg><span>Watch scene</span></span>
+          </button>
+          <h3>Heretic</h3>
+          <p><b>Principal</b> · A24<i>, with Hugh Grant</i></p>
+        </article>
+        <article class="feat">
+          <button type="button" class="poster" style="--t:-1deg" data-video="chicken-sisters" data-shape="land" data-tone="sweet" aria-label="Play a scene from The Chicken Sisters">
+            <img srcset="assets/featured/chicken-400.webp 400w, assets/featured/chicken.webp 700w" sizes="(max-width: 760px) 30vw, 275px" src="assets/featured/chicken.webp" alt="The Chicken Sisters poster">
+            <span class="watch"><svg><use href="#i-play"/></svg><span>Watch scene</span></span>
+          </button>
+          <h3>The Chicken Sisters</h3>
+          <p><b>Recurring</b> · Hallmark<i> series</i></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="sides">
+    <section class="side sweet" id="sweetheart" aria-labelledby="sweet-title">
+      <div class="decor" aria-hidden="true">
+        <span class="blob b1" data-depth=".12"></span><span class="blob b2" data-depth="-.1"></span><span class="blob b3" data-depth=".06"></span>
+        <svg class="doodle" data-depth=".22" style="left:6%;top:16%;width:70px" viewBox="0 0 24 24"><path d="M12 20s-7-4.3-8.8-8.6C1.8 8.2 3.8 5 7 5c2 0 3.4 1.2 5 3.1C13.6 6.2 15 5 17 5c3.2 0 5.2 3.2 3.8 6.4C19 15.7 12 20 12 20z"/></svg>
+        <svg class="doodle" data-depth="-.16" style="right:7%;top:9%;width:44px" viewBox="0 0 24 24"><path d="M12 2v6M12 16v6M2 12h6M16 12h6M5 5l3.5 3.5M15.5 15.5 19 19M19 5l-3.5 3.5M8.5 15.5 5 19"/></svg>
+        <svg class="doodle" data-depth=".3" style="right:16%;bottom:18%;width:56px" viewBox="0 0 24 24"><path d="M12 20s-7-4.3-8.8-8.6C1.8 8.2 3.8 5 7 5c2 0 3.4 1.2 5 3.1C13.6 6.2 15 5 17 5c3.2 0 5.2 3.2 3.8 6.4C19 15.7 12 20 12 20z"/></svg>
+        <svg class="doodle" data-depth="-.2" style="left:3%;bottom:30%;width:120px" viewBox="0 0 120 30"><path d="M2 20c12-16 22 12 34-2s22 10 34-4 22 10 34-2 10 4 14 2"/></svg>
+      </div>
+      <div class="wrap">
+        <h2 class="side-title sweet-type" id="sweet-title">Sweetheart<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.3-8.8-8.6C1.8 8.2 3.8 5 7 5c2 0 3.4 1.2 5 3.1C13.6 6.2 15 5 17 5c3.2 0 5.2 3.2 3.8 6.4C19 15.7 12 20 12 20z"/></svg></h2>
+        <div class="side-grid">
+          <figure class="still"><img srcset="assets/photos/sweet-smile-400.webp 400w, assets/photos/sweet-smile-800.webp 800w, assets/photos/sweet-smile.webp 1179w" sizes="(max-width: 760px) 92vw, 473px" src="assets/photos/sweet-smile.webp" alt="Haylie Hansen laughing, hair up" loading="lazy" decoding="async"></figure>
+          <button type="button" class="scene wide" data-video="chicken-sisters" data-shape="land">
+            <img srcset="assets/video/chicken-sisters-400.webp 400w, assets/video/chicken-sisters.webp 886w" sizes="(max-width: 760px) 92vw, 651px" src="assets/video/chicken-sisters.webp" alt="" loading="lazy" decoding="async">
+            <span class="cap"><span class="play"><svg><use href="#i-play"/></svg></span><span><strong>The Chicken Sisters</strong><small>Recurring, Hallmark series</small></span><span class="dur">1:05</span></span>
+          </button>
+          <button type="button" class="scene tall" data-video="mtt-hospital" data-shape="tall" data-pos="face-high">
+            <img srcset="assets/video/mtt-hospital-400.webp 400w, assets/video/mtt-hospital.webp 720w" sizes="(max-width: 760px) 45vw, 315px" src="assets/video/mtt-hospital.webp" alt="" loading="lazy" decoding="async">
+            <span class="cap"><span class="play"><svg><use href="#i-play"/></svg></span><span><strong>Mafia's Tender Torture</strong><small>Lead, hospital scene</small></span></span>
+          </button>
+          <button type="button" class="scene tall" data-video="mtt-office" data-shape="tall" data-pos="face-high">
+            <img srcset="assets/video/mtt-office-400.webp 400w, assets/video/mtt-office.webp 720w" sizes="(max-width: 760px) 45vw, 315px" src="assets/video/mtt-office.webp" alt="" loading="lazy" decoding="async">
+            <span class="cap"><span class="play"><svg><use href="#i-play"/></svg></span><span><strong>Mafia's Tender Torture</strong><small>Lead, office scene</small></span></span>
+          </button>
+        </div>
+        <div class="prints">
+          <button type="button" class="print" style="--t:-2.5deg;--tape:-4deg" data-full="assets/more/pink-fur.webp"><img srcset="assets/more/pink-fur-400.webp 400w, assets/more/pink-fur.webp 772w" sizes="(max-width: 760px) 28vw, 346px" src="assets/more/pink-fur.webp" alt="Haylie Hansen smiling in a pink faux-fur jacket" loading="lazy" decoding="async"></button>
+          <button type="button" class="print" style="--t:1.5deg;--tape:3deg" data-full="assets/more/bouquet.webp"><img srcset="assets/more/bouquet-400.webp 400w, assets/more/bouquet.webp 651w" sizes="(max-width: 760px) 28vw, 346px" src="assets/more/bouquet.webp" alt="Haylie Hansen holding a pink bouquet" loading="lazy" decoding="async"></button>
+          <button type="button" class="print" style="--t:-1deg;--tape:-2deg" data-full="assets/more/denim.webp"><img srcset="assets/more/denim-400.webp 400w, assets/more/denim.webp 711w" sizes="(max-width: 760px) 28vw, 346px" src="assets/more/denim.webp" alt="Haylie Hansen in an oversized denim jacket" loading="lazy" decoding="async"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="side villain" id="villain" aria-labelledby="villain-title">
+      <div class="decor" aria-hidden="true">
+        <span class="blob b1" data-depth=".1"></span><span class="blob b2" data-depth="-.08"></span>
+        <svg class="doodle" data-depth=".2" style="left:4%;top:38%;width:180px" viewBox="0 0 180 60"><path d="M2 50 60 6M24 58 110 2M70 56 178 10"/></svg>
+        <svg class="doodle" data-depth="-.18" style="right:5%;top:62%;width:130px" viewBox="0 0 130 40"><path d="M2 30c20-26 30 14 52-6s28 14 48-4 18 8 26 4"/></svg>
+      </div>
+      <div class="wrap">
+        <h2 class="side-title badass-title" id="villain-title"><span class="sr-only">Badass</span>
+          <span class="bt bt-slash" aria-hidden="true"><span class="sl-word sweet-type"><span class="sl-half a">Sweetheart</span><span class="sl-half b">Sweetheart</span><svg class="sl-cut" viewBox="0 0 100 100" preserveAspectRatio="none"><line class="glow" x1="-5" y1="71.6" x2="105" y2="30.4"/><line class="core" x1="-5" y1="71.6" x2="105" y2="30.4"/></svg></span><span class="sl-new jitter">Badass</span></span>
+        </h2>
+        <div class="side-grid">
+          <button type="button" class="scene wide" data-video="twin-sister" data-shape="tall" data-pos="face-high">
+            <img srcset="assets/video/twin-sister-400.webp 400w, assets/video/twin-sister.webp 720w" sizes="(max-width: 760px) 92vw, 651px" src="assets/video/twin-sister.webp" alt="" loading="lazy" decoding="async">
+            <span class="cap"><span class="play"><svg><use href="#i-play"/></svg></span><span><strong>Marrying My Twin Sister's Rich Fiancé</strong><small>Lead</small></span><span class="dur">1:28</span></span>
+          </button>
+          <button type="button" class="scene wide" data-video="heretic" data-shape="land">
+            <img srcset="assets/video/heretic-400.webp 400w, assets/video/heretic.webp 848w" sizes="(max-width: 760px) 92vw, 651px" src="assets/video/heretic.webp" alt="" loading="lazy" decoding="async">
+            <span class="cap"><span class="play"><svg><use href="#i-play"/></svg></span><span><strong>Heretic</strong><small>Principal, A24 feature</small></span><span class="dur">0:27</span></span>
+          </button>
+          <figure class="still"><img srcset="assets/photos/villain-leather-400.webp 400w, assets/photos/villain-leather-800.webp 800w, assets/photos/villain-leather.webp 1179w" sizes="(max-width: 760px) 92vw, 473px" src="assets/photos/villain-leather.webp" alt="Haylie Hansen in a black leather jacket" loading="lazy" decoding="async"></figure>
+        </div>
+        <div class="prints">
+          <button type="button" class="print" style="--t:2deg;--tape:3deg" data-full="assets/more/blazer.webp"><img srcset="assets/more/blazer-400.webp 400w, assets/more/blazer.webp 707w" sizes="(max-width: 760px) 28vw, 346px" src="assets/more/blazer.webp" alt="Haylie Hansen in a black blazer" loading="lazy" decoding="async"></button>
+          <button type="button" class="print" style="--t:-2.4deg;--tape:-5deg" data-full="assets/more/sfx-bite.webp"><img srcset="assets/more/sfx-bite.webp 360w" sizes="(max-width: 760px) 28vw, 346px" src="assets/more/sfx-bite.webp" alt="Haylie Hansen in bloody special-effects makeup, fangs bared" loading="lazy" decoding="async"></button>
+          <button type="button" class="print" style="--t:1.2deg;--tape:2deg" data-full="assets/more/chair.webp"><img srcset="assets/more/chair-400.webp 400w, assets/more/chair.webp 661w" sizes="(max-width: 760px) 28vw, 346px" src="assets/more/chair.webp" alt="Haylie Hansen posed upside down on a chair in combat boots" loading="lazy" decoding="async"></button>
+          <span class="scrawl-note bite-note" aria-hidden="true">bite me<svg viewBox="0 0 54 46"><path d="M4 6c22-2 38 10 42 32M38 30l8 10 4-12"/></svg></span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="model" id="modelling" aria-labelledby="model-title">
+    <div class="wrap">
+      <h2 class="model-title" id="model-title" data-text="Modelling">Modelling</h2>
+      <div class="model-grid">
+        <button type="button" class="look lead" data-full="assets/model/foil-stand.webp"><img srcset="assets/model/foil-stand-400.webp 400w, assets/model/foil-stand-800.webp 800w, assets/model/foil-stand.webp 1136w" sizes="(max-width: 760px) 92vw, 559px" src="assets/model/foil-stand.webp" alt="Haylie Hansen in black against silver foil" loading="lazy" decoding="async"><span class="tag">Editorial</span></button>
+        <button type="button" class="look" data-full="assets/model/chain-veil.webp"><img srcset="assets/model/chain-veil-400.webp 400w, assets/model/chain-veil-800.webp 800w, assets/model/chain-veil.webp 1148w" sizes="(max-width: 760px) 45vw, 267px" src="assets/model/chain-veil.webp" alt="Haylie Hansen in a chain veil and black corset" loading="lazy" decoding="async"><span class="tag">Couture</span></button>
+        <button type="button" class="look" data-full="assets/model/runway-skirt.webp"><img srcset="assets/model/runway-skirt-400.webp 400w, assets/model/runway-skirt.webp 720w" sizes="(max-width: 760px) 45vw, 267px" src="assets/model/runway-skirt.webp" alt="Haylie Hansen walking a runway in a black corset and pink skirt" loading="lazy" decoding="async"><span class="tag">Runway</span></button>
+        <button type="button" class="look" data-full="assets/model/wings.webp"><img srcset="assets/model/wings-400.webp 400w, assets/model/wings-800.webp 800w, assets/model/wings.webp 1032w" sizes="(max-width: 760px) 45vw, 267px" src="assets/model/wings.webp" alt="Haylie Hansen in white with feathered angel wings" loading="lazy" decoding="async"></button>
+        <button type="button" class="look" data-full="assets/model/lace-roses.webp"><img srcset="assets/model/lace-roses-400.webp 400w, assets/model/lace-roses.webp 941w" sizes="(max-width: 760px) 45vw, 267px" src="assets/model/lace-roses.webp" alt="Haylie Hansen in white lace among pink roses" loading="lazy" decoding="async"></button>
+        <button type="button" class="look" data-full="assets/model/runway-boots.webp"><img srcset="assets/model/runway-boots-400.webp 400w, assets/model/runway-boots.webp 932w" sizes="(max-width: 760px) 45vw, 267px" src="assets/model/runway-boots.webp" alt="Haylie Hansen on a runway in lace and combat boots" loading="lazy" decoding="async"><span class="tag">Runway</span></button>
+        <button type="button" class="look" data-full="assets/model/cowgirl-hat.webp"><img srcset="assets/model/cowgirl-hat-400.webp 400w, assets/model/cowgirl-hat.webp 611w" sizes="(max-width: 760px) 45vw, 267px" src="assets/model/cowgirl-hat.webp" alt="Haylie Hansen in a cowboy hat" loading="lazy" decoding="async"><span class="tag">Western</span></button>
+        <button type="button" class="look" data-full="assets/model/blue-dress.webp"><img srcset="assets/model/blue-dress-400.webp 400w, assets/model/blue-dress.webp 923w" sizes="(max-width: 760px) 45vw, 267px" src="assets/model/blue-dress.webp" alt="Haylie Hansen in a blue dress on a lakeside deck" loading="lazy" decoding="async"></button>
+        <button type="button" class="look" data-full="assets/model/wall.webp"><img srcset="assets/model/wall-400.webp 400w, assets/model/wall-800.webp 800w, assets/model/wall.webp 956w" sizes="(max-width: 760px) 45vw, 267px" src="assets/model/wall.webp" alt="Haylie Hansen posing against a slatted wall" loading="lazy" decoding="async"></button>
+        <button type="button" class="look" data-full="assets/model/pink-blouse.webp"><img srcset="assets/model/pink-blouse-400.webp 400w, assets/model/pink-blouse-800.webp 800w, assets/model/pink-blouse.webp 1179w" sizes="(max-width: 760px) 45vw, 267px" src="assets/model/pink-blouse.webp" alt="Haylie Hansen in a pink paisley blouse" loading="lazy" decoding="async"></button>
+        <button type="button" class="look" data-full="assets/model/swim.webp"><img srcset="assets/model/swim-400.webp 400w, assets/model/swim.webp 943w" sizes="(max-width: 760px) 45vw, 267px" src="assets/model/swim.webp" alt="Haylie Hansen in a blue swimsuit and white sunglasses" loading="lazy" decoding="async"><span class="tag">Swim</span></button>
+        <button type="button" class="look" data-full="assets/model/white-crop.webp"><img srcset="assets/model/white-crop-400.webp 400w, assets/model/white-crop-800.webp 800w, assets/model/white-crop.webp 1065w" sizes="(max-width: 760px) 45vw, 267px" src="assets/model/white-crop.webp" alt="Haylie Hansen in a white crop top, studio" loading="lazy" decoding="async"></button>
+        <button type="button" class="look" data-full="assets/model/chain-foil.webp"><img srcset="assets/model/chain-foil-400.webp 400w, assets/model/chain-foil-800.webp 800w, assets/model/chain-foil.webp 1141w" sizes="(max-width: 760px) 45vw, 267px" src="assets/model/chain-foil.webp" alt="Haylie Hansen in a chain headdress against silver foil" loading="lazy" decoding="async"><span class="tag">Couture</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="credits" aria-labelledby="credits-title">
+    <div class="wrap">
+      <p class="xo-mark" aria-hidden="true">xoxox</p>
+      <h2 class="sweet-type" id="credits-title">Credits</h2>
+      <div class="credit-cols">
+        <ol>
+          <li class="credit"><span><span class="t">Chalk It Up to Love</span> <span class="k">TV movie</span></span><span class="role">Supporting lead</span><span class="dir">Dir. Terry Ingram</span></li>
+          <li class="credit"><span><span class="t">Sidelined 3</span> <span class="k">Feature</span></span><span class="role">Principal</span><span class="dir">Dir. Michael Medico, Tubi</span></li>
+          <li class="credit"><span><span class="t">Rags 2 Richmond</span> <span class="k">Feature</span></span><span class="role">Principal</span><span class="dir">Dir. Tesh Guttikonda</span></li>
+          <li class="credit"><span><span class="t">The Idaho Murders</span> <span class="k">TV movie</span></span><span class="role">Supporting lead</span><span class="dir">Dir. Steven Adelson, Lifetime</span></li>
+          <li class="credit"><span><span class="t">The Chicken Sisters</span> <span class="k">Series</span></span><span class="role">Recurring</span><span class="dir">Dir. various, Hallmark</span></li>
+          <li class="credit"><span><span class="t">Casket Girls</span> <span class="k">Feature</span></span><span class="role">Supporting</span><span class="dir">Dir. Justin Dyck, Lighthouse</span></li>
+        </ol>
+        <ol>
+          <li class="credit"><span><span class="t">How to Lose a Popularity Contest</span> <span class="k">Feature</span></span><span class="role">Principal</span><span class="dir">Dir. Stephen Campanelli, Tubi</span></li>
+          <li class="credit"><span><span class="t">Heretic</span> <span class="k">Feature</span></span><span class="role">Principal</span><span class="dir">Dir. Scott Beck &amp; Bryan Woods, A24</span></li>
+          <li class="credit"><span><span class="t">Mafia's Tender Torture</span> <span class="k">Mini series</span></span><span class="role">Lead</span><span class="dir">Dir. Dom Cutrupi</span></li>
+          <li class="credit"><span><span class="t">Marrying My Twin Sister's Rich Fiancé</span></span><span class="role">Lead</span><span class="dir">Dir. Leo Max</span></li>
+          <li class="credit"><span><span class="t">The Alpha's Heiress Is a Maid</span> <span class="k">Web series</span></span><span class="role">Lead</span><span class="dir">Dir. Eric Zhang</span></li>
+          <li class="credit"><span><span class="t">Trapped in Your Toxic Love</span> <span class="k">Mini series</span></span><span class="role">Lead</span><span class="dir">Dir. Dom Cutrupi</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="fans" id="socials" aria-labelledby="fans-title">
+    <div class="wrap">
+      <h2 class="sweet-type" id="fans-title">Find me elsewhere</h2>
+      <div class="fan-grid">
+        <a class="fan" href="https://www.cameo.com/haylie_hansen" target="_blank" rel="noopener">
+          <span class="fan-pics"><img srcset="assets/social/swim-smile-400.webp 400w, assets/social/swim-smile.webp 672w" sizes="(max-width: 760px) 22vw, 167px" src="assets/social/swim-smile.webp" alt="" loading="lazy" decoding="async"><img srcset="assets/social/cardigan-smile-400.webp 400w, assets/social/cardigan-smile.webp 784w" sizes="(max-width: 760px) 22vw, 167px" src="assets/social/cardigan-smile.webp" alt="" loading="lazy" decoding="async"><img srcset="assets/social/bouquet-2-400.webp 400w, assets/social/bouquet-2.webp 688w" sizes="(max-width: 760px) 22vw, 167px" src="assets/social/bouquet-2.webp" alt="" loading="lazy" decoding="async"></span>
+          <span class="fan-txt"><b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h12v11H3zM15 10l6-3.5v11L15 14"/></svg>Cameo</b><small class="long">Personal videos &middot; &#9733; 5.0 (6 reviews)</small><small class="short">&#9733; 5.0 &middot; 6 reviews</small><em>Book a video</em></span>
+        </a>
+        <a class="fan" href="https://www.instagram.com/haylie_hansen_/" target="_blank" rel="noopener">
+          <span class="fan-pics"><img srcset="assets/social/cowgirl-road-400.webp 400w, assets/social/cowgirl-road.webp 903w" sizes="(max-width: 760px) 22vw, 167px" src="assets/social/cowgirl-road.webp" alt="" loading="lazy" decoding="async"><img srcset="assets/social/splits-400.webp 400w, assets/social/splits-800.webp 800w, assets/social/splits.webp 1000w" sizes="(max-width: 760px) 22vw, 167px" src="assets/social/splits.webp" alt="" loading="lazy" decoding="async"><img srcset="assets/social/wings-wide-400.webp 400w, assets/social/wings-wide-800.webp 800w, assets/social/wings-wide.webp 1000w" sizes="(max-width: 760px) 22vw, 167px" src="assets/social/wings-wide.webp" alt="" loading="lazy" decoding="async"></span>
+          <span class="fan-txt"><b><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6"/></svg>Instagram</b><small class="long">@haylie_hansen_ &middot; 15.1K followers</small><small class="short">15.1K followers</small><em>Follow</em></span>
+        </a>
+        <a class="fan" href="https://www.imdb.com/name/nm16328578/" target="_blank" rel="noopener">
+          <span class="fan-pics"><img srcset="assets/social/sfx-scream-400.webp 400w, assets/social/sfx-scream.webp 562w" sizes="(max-width: 760px) 22vw, 167px" src="assets/social/sfx-scream.webp" alt="" loading="lazy" decoding="async"><img srcset="assets/social/polaroids-400.webp 400w, assets/social/polaroids.webp 750w" sizes="(max-width: 760px) 22vw, 167px" src="assets/social/polaroids.webp" alt="" loading="lazy" decoding="async"><img srcset="assets/social/cowgirl-field-400.webp 400w, assets/social/cowgirl-field-800.webp 800w, assets/social/cowgirl-field.webp 1000w" sizes="(max-width: 760px) 22vw, 167px" src="assets/social/cowgirl-field.webp" alt="" loading="lazy" decoding="async"></span>
+          <span class="fan-txt"><b><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M7 9v6M10.5 9v6M14 9v6"/></svg><span style="font-family:var(--body-font);font-style:normal;font-weight:600">IMDb</span></b><small class="long">Full filmography &middot; 21 titles</small><small class="short">21 titles</small><em>See the list</em></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <h2 class="sweet-type">Casting &amp; bookings</h2>
+    <div class="footer-grid">
+      <div class="manager">
+        <h3 class="f-label">Representation</h3>
+        <div class="rep-cards">
+          <div class="rep">
+            <span class="where">Canada</span>
+            <p class="who">Shea Cantin</p>
+            <p class="co">Manager, Play Management</p>
+            <a href="mailto:info@playmgmt.com">info@playmgmt.com</a>
+            <a href="tel:+16046777529">(604) 677-7529</a>
+          </div>
+          <div class="rep">
+            <span class="where">United States</span>
+            <p class="who">Nicole MacNaughton</p>
+            <p class="co">Manager, Untamed Artists LA</p>
+            <a href="mailto:nicole@untamedartistsla.com">nicole@untamedartistsla.com</a>
+            <a href="tel:+13235704433">(323) 570-4433</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-side">
+        <div class="direct">
+          <h3 class="f-label">Haylie directly</h3>
+          <a href="mailto:hayliehansen@shaw.ca">hayliehansen@shaw.ca</a>
+        </div>
+        <a class="btn" href="assets/HaylieHansen_Resume.pdf" download><svg><use href="#i-down"/></svg>Download résumé</a>
+        <div class="socials">
+          <a href="https://pro.imdb.com/name/nm16328578/" target="_blank" rel="noopener"><svg><use href="#i-imdb"/></svg>IMDb</a>
+          <a href="https://www.instagram.com/haylie_hansen_/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="colophon"><span>© 2026 Haylie Hansen<span class="built-by">Built by Harrison Keen, <a href="https://harrisonkeen.tech" rel="noopener">harrisonkeen.tech</a></span></span><span class="xo" aria-hidden="true">xoxo</span></div>
+  </div>
+</footer>
+
+<div class="theatre" hidden role="dialog" aria-modal="true" aria-label="Scene player">
+  <button type="button" class="close">Close</button>
+  <figure class="screen">
+    <video playsinline preload="none"></video>
+    <div class="ctrl">
+      <button type="button" class="pp" aria-label="Pause"><svg><use href="#i-pause"/></svg></button>
+      <span class="now-t">0:00</span>
+      <input type="range" class="seek" min="0" max="1000" value="0" aria-label="Seek">
+      <span class="dur-t">0:00</span>
+      <button type="button" class="mute" aria-label="Mute"><svg><use href="#i-sound"/></svg></button>
+    </div>
+  </figure>
+</div>
+
+<div class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo">
+  <button type="button" class="close">Close</button>
+  <button type="button" class="lb-nav prev" aria-label="Previous photo">&#8249;</button>
+  <img alt="">
+  <button type="button" class="lb-nav next" aria-label="Next photo">&#8250;</button>
+</div>
+
+
+<script>
+  // Phones: pin viewport-sized things (the hero) to the first screen height, in px. In-app browsers (Instagram etc.)
+  // resize the whole viewport, svh included, as their toolbar slides away on scroll, and the hero grew mid-scroll.
+  // Only a width change (rotation) re-measures. Desktop keeps plain svh.
+  (() => { if (!matchMedia('(pointer: coarse)').matches) return;
+    const r = document.documentElement; let w = 0;
+    const pin = () => { if (innerWidth === w) return; w = innerWidth; r.style.setProperty('--screen', innerHeight + 'px'); };
+    pin(); addEventListener('resize', pin); })();
+</script>
+<script>
+(() => {
+  const hero = document.querySelector('.hero');
+  const villain = hero.querySelector('.layer.villain');
+  const knob = hero.querySelector('.seam-knob');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Villain name: each letter knocked slightly off true.
+  let seed = 7;
+  const rand = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  document.querySelectorAll('.jitter').forEach(el => {
+    el.innerHTML = [...el.textContent].map(ch =>
+      `<span style="--r:${(rand() * 9 - 4.5).toFixed(1)}deg;--y:${(rand() * .08 - .04).toFixed(3)}em">${ch}</span>`).join('');
+  });
+
+  // Hero seam
+  let seamPos = 50;
+  const setSeam = (p) => {
+    seamPos = Math.max(0, Math.min(100, p));
+    hero.style.setProperty('--seam', seamPos + '%');
+    villain.style.clipPath = `inset(0 0 0 ${seamPos}%)`;
+    knob.setAttribute('aria-valuenow', Math.round(seamPos));
+  };
+
+  // Opening (as on Evan's, quicker): sweetheart fills the frame, the seam whips across to badass, then settles in the middle.
+  let raf = 0, timers = [];
+  const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  const tween = (to, ms, then) => {
+    cancelAnimationFrame(raf); const from = seamPos, t0 = performance.now();
+    const step = now => { const t = Math.min(1, (now - t0) / ms); setSeam(from + (to - from) * ease(t)); if (t < 1) raf = requestAnimationFrame(step); else if (then) then(); };
+    raf = requestAnimationFrame(step);
+  };
+  const stopIntro = () => { cancelAnimationFrame(raf); timers.forEach(clearTimeout); timers = []; };
+  const playIntro = () => { stopIntro();
+    if (reduce) return setSeam(50);
+    setSeam(100); timers.push(setTimeout(() => tween(0, 850, () => timers.push(setTimeout(() => tween(50, 650), 160))), 350)); };
+  playIntro();
+
+  // Dragging the seam
+  let dragging = false;
+  const fromEvent = (e) => { const r = hero.getBoundingClientRect(); setSeam((e.clientX - r.left) / r.width * 100); };
+  knob.addEventListener('pointerdown', e => { stopIntro(); dragging = true; knob.setPointerCapture(e.pointerId); });
+  knob.addEventListener('pointermove', e => { if (dragging) fromEvent(e); });
+  knob.addEventListener('pointerup', () => { dragging = false; });
+  knob.addEventListener('keydown', e => {
+    stopIntro();
+    if (e.key === 'ArrowLeft') { setSeam(seamPos - 5); e.preventDefault(); }
+    if (e.key === 'ArrowRight') { setSeam(seamPos + 5); e.preventDefault(); }
+  });
+
+  // The badass title plays once it's on screen (every title option keys its reveal off .drawn on the h2).
+  const struck = document.querySelector('.badass-title');
+  if (reduce || !('IntersectionObserver' in window)) struck.classList.add('drawn');
+  else new IntersectionObserver((es, o) => es.forEach(en => { if (en.isIntersecting) { struck.classList.add('drawn'); o.disconnect(); } }), { threshold: .6 }).observe(struck);
+  const replayTitle = () => { struck.scrollIntoView({ block: 'center', behavior: 'instant' }); struck.classList.remove('drawn'); void struck.offsetWidth; setTimeout(() => struck.classList.add('drawn'), 300); };
+
+  // Theatre with its own controls (native bars clip on narrow video in Firefox)
+  const th = document.querySelector('.theatre'), vid = th.querySelector('video');
+  const pp = th.querySelector('.pp'), seek = th.querySelector('.seek'), mute = th.querySelector('.mute');
+  const nowT = th.querySelector('.now-t'), durT = th.querySelector('.dur-t');
+  const fmt = s => isFinite(s) ? `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}` : '0:00';
+  const icon = (btn, id) => btn.querySelector('use').setAttribute('href', id);
+  let opener = null;
+  document.querySelectorAll('.scene, .poster').forEach(btn => btn.addEventListener('click', () => {
+    opener = btn;
+    th.dataset.shape = btn.dataset.shape;
+    th.classList.toggle('sweet', btn.dataset.tone ? btn.dataset.tone === 'sweet' : !!btn.closest('.side.sweet'));
+    vid.poster = btn.querySelector('img').src;
+    vid.src = `assets/video/${btn.dataset.video}.mp4`;
+    th.hidden = false;
+    vid.play().catch(() => {});
+    th.querySelector('.close').focus();
+  }));
+  vid.addEventListener('loadedmetadata', () => { th.style.setProperty('--vr', vid.videoWidth / vid.videoHeight); durT.textContent = fmt(vid.duration); });
+  vid.addEventListener('play', () => { icon(pp, '#i-pause'); pp.setAttribute('aria-label', 'Pause'); });
+  vid.addEventListener('pause', () => { icon(pp, '#i-play'); pp.setAttribute('aria-label', 'Play'); });
+  vid.addEventListener('timeupdate', () => { nowT.textContent = fmt(vid.currentTime); if (vid.duration) seek.value = vid.currentTime / vid.duration * 1000; });
+  pp.addEventListener('click', () => vid.paused ? vid.play() : vid.pause());
+  vid.addEventListener('click', () => vid.paused ? vid.play() : vid.pause());
+  seek.addEventListener('input', () => { if (vid.duration) vid.currentTime = seek.value / 1000 * vid.duration; });
+  mute.addEventListener('click', () => { vid.muted = !vid.muted; icon(mute, vid.muted ? '#i-mute' : '#i-sound'); mute.setAttribute('aria-label', vid.muted ? 'Unmute' : 'Mute'); });
+  const close = () => { vid.pause(); vid.removeAttribute('src'); vid.load(); th.hidden = true; if (opener) opener.focus(); };
+  th.querySelector('.close').addEventListener('click', close);
+  th.addEventListener('click', e => { if (e.target === th) close(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !th.hidden) close(); });
+
+  // Lightbox: prints and modelling looks open full size; arrows step through that section's photos
+  const lb = document.querySelector('.lightbox'), lbImg = lb.querySelector('img');
+  let group = [], gi = 0, lbOpener = null;
+  const show = i => { gi = (i + group.length) % group.length; const b = group[gi]; lbImg.src = b.dataset.full; lbImg.alt = b.querySelector('img').alt; };
+  document.querySelectorAll('[data-full]').forEach(btn => btn.addEventListener('click', () => {
+    lbOpener = btn; group = [...btn.closest('section').querySelectorAll('[data-full]')];
+    show(group.indexOf(btn)); lb.hidden = false; lb.querySelector('.close').focus();
+  }));
+  const lbClose = () => { lb.hidden = true; lbImg.removeAttribute('src'); if (lbOpener) lbOpener.focus(); };
+  lb.querySelector('.close').addEventListener('click', lbClose);
+  lb.querySelector('.prev').addEventListener('click', () => show(gi - 1));
+  lb.querySelector('.next').addEventListener('click', () => show(gi + 1));
+  lb.addEventListener('click', e => { if (e.target === lb) lbClose(); });
+  addEventListener('keydown', e => {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') lbClose();
+    if (e.key === 'ArrowLeft') show(gi - 1);
+    if (e.key === 'ArrowRight') show(gi + 1);
+  });
+
+  // Back layer drifts slower than the page (blobs and doodles only; content never moves)
+  if (!reduce) {
+    const layers = [...document.querySelectorAll('.decor [data-depth]')];
+    let ticking = false;
+    const drift = () => {
+      ticking = false;
+      layers.forEach(el => { const r = el.closest('section').getBoundingClientRect();
+        if (r.bottom < -200 || r.top > innerHeight + 200) return;
+        el.style.transform = `translate3d(0, ${(r.top * el.dataset.depth).toFixed(1)}px, 0)`; });
+    };
+    addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(drift); } }, { passive: true });
+    drift();
+  }
+
+  // ---------- Atmosphere: a fixed back layer the page scrolls over. Each set has a back wash plus planes that move at a
+  // fraction of the scroll (far planes slowest). The sweet set crossfades to the badass set as the villain side arrives.
+  const root = document.documentElement, atm = document.querySelector('.atmos');
+  const villainSec = document.getElementById('villain');
+  let planes = [], aSeed = 1;
+  const rr = () => (aSeed = (aSeed * 16807) % 2147483647) / 2147483647;
+  const R = (a, b) => a + rr() * (b - a);
+  const pick = a => a[Math.floor(rr() * a.length)];
+  const SPARK = '<svg viewBox="0 0 24 24"><path d="M12 0c.6 6.4 5.6 11.4 12 12-6.4.6-11.4 5.6-12 12-.6-6.4-5.6-11.4-12-12C6.4 11.4 11.4 6.4 12 0z"/></svg>';
+  const HEART = '<svg viewBox="0 0 24 24"><path d="M12 20s-7-4.3-8.8-8.6C1.8 8.2 3.8 5 7 5c2 0 3.4 1.2 5 3.1C13.6 6.2 15 5 17 5c3.2 0 5.2 3.2 3.8 6.4C19 15.7 12 20 12 20z"/></svg>';
+  const vw = () => innerWidth;
+  // item makers: each returns HTML; x/y are % of the plane
+  const at = (x, y, w, h, extra = '') => `left:${x.toFixed(1)}%;top:${y.toFixed(2)}%;width:${w.toFixed(0)}px;height:${(h ?? w).toFixed(0)}px;${extra}`;
+  const tw = () => rr() < .45 ? ` tw" style="--tw:${R(2.5, 6).toFixed(1)}s;--td:${R(-6, 0).toFixed(1)}s;` : '" style="';
+  const make = {
+    orb: (n, cols, min, max) => Array.from({ length: n }, () => { const s = R(min, max); return `<i class="orb" style="${at(R(-5, 105), R(0, 100), s, s, `--c:${pick(cols)}`)}"></i>`; }).join(''),
+    ring: (n, cols, min, max) => Array.from({ length: n }, () => { const s = R(min, max); return `<i class="${rr() < .6 ? 'ring' : 'orb'}" style="${at(R(0, 100), R(0, 100), s, s, `--c:${pick(cols)};opacity:${R(.4, 1).toFixed(2)}`)}"></i>`; }).join(''),
+    haze: (n, cols, min, max) => Array.from({ length: n }, () => { const w = R(min, max); return `<i class="haze" style="${at(R(-10, 110), R(0, 100), w, w * R(.35, .6), `--c:${pick(cols)}`)}"></i>`; }).join(''),
+    spark: (n, cols, min, max, hearts = 0) => Array.from({ length: n }, () => { const s = R(min, max), h = rr() < hearts;
+      return `<i class="${h ? 'hrt' : 'spk'}${tw()}${at(R(2, 98), R(0, 100), s * (h ? 1.4 : 1), null, `--c:${pick(cols)}`).replace(/height:[^;]+;/, '')}">${h ? HEART : SPARK}</i>`; }).join(''),
+    ember: n => Array.from({ length: n }, () => { const s = R(2, 5.5); return `<i class="emb${tw()}${at(R(2, 98), R(0, 100), s, s, `opacity:${R(.45, 1).toFixed(2)}`)}"></i>`; }).join(''),
+    words: (n, text, cls, size, css) => Array.from({ length: n }, (_, i) => `<i class="word ${cls}" style="left:${i % 2 ? R(28, 44) : R(-8, 2)}%;top:${((i + .5) / n * 100 + R(-4, 4)).toFixed(1)}%;font-size:${size}px;${css}">${text}</i>`).join(''),
+    ghost: (src, x) => `<img class="ghost" src="${src}" alt="" style="left:${x}%;top:70%;height:${Math.max(innerHeight * 1.25, 900)}px">`
+  };
+  const LIGHT = { lilac: 'rgba(157,154,230,.45)', white: 'rgba(255,255,255,.75)', blush: 'rgba(246,170,192,.85)', rose: 'rgba(227,110,150,.35)' };
+  // recipes: [backClass, extraHTML, [speed, (H) => html], ...]
+  const RECIPES = {
+    dream: {
+      sweet: ['dream-s', '', [.05, H => make.orb(7, [LIGHT.lilac, LIGHT.white, LIGHT.blush, LIGHT.rose], vw() * .3, vw() * .62)],
+        [.16, H => make.ring(Math.round(H / 170), ['rgba(255,255,255,.7)', 'rgba(255,255,255,.5)', 'rgba(157,154,230,.4)'], 40, 150)],
+        [.32, H => make.spark(Math.round(H / 105), ['rgba(255,255,255,.95)', 'rgba(58,27,49,.32)', 'rgba(157,154,230,.7)'], 8, 20, .3)]],
+      mean: ['dream-m', '', [.05, H => make.orb(7, ['rgba(227,18,47,.38)', 'rgba(120,10,40,.55)', 'rgba(157,154,230,.1)'], vw() * .3, vw() * .62)],
+        [.16, H => make.ring(Math.round(H / 170), ['rgba(255,70,90,.45)', 'rgba(227,18,47,.35)', 'rgba(255,140,120,.25)'], 40, 150)],
+        [.32, H => make.ember(Math.round(H / 70))]]
+    }
+  };
+  const maxScroll = () => Math.max(0, document.documentElement.scrollHeight - innerHeight);
+  let villainAt = 0;
+  const atmosScroll = () => {
+    if (!planes.length) return;
+    const y = scrollY;
+    if (!reduce) planes.forEach(p => { p.el.style.transform = `translate3d(0, ${(-y * p.s).toFixed(1)}px, 0)`; });
+    // 0 → 1 as the viewport centre runs from 40% of a screen above the villain side to 20% into it
+    const d = Math.min(1, Math.max(0, (y + innerHeight * .5 - (villainAt - innerHeight * .4)) / (innerHeight * .6)));
+    atm.style.setProperty('--dark', d.toFixed(3));
+  };
+  const sizeAtmos = () => {
+    villainAt = villainSec.getBoundingClientRect().top + scrollY;
+    const m = maxScroll(); planes.forEach(p => { p.el.style.height = (innerHeight + m * p.s + 60) + 'px'; });
+    atmosScroll();
+  };
+  const buildAtmos = () => {
+    const kind = root.dataset.atmos; planes = []; atm.innerHTML = '';
+    root.classList.toggle('has-atmos', kind !== 'off');
+    if (!RECIPES[kind]) return;
+    const m = maxScroll();
+    ['sweet', 'mean'].forEach(side => {
+      aSeed = side === 'sweet' ? 11 : 29;
+      const [back, extra, ...pl] = RECIPES[kind][side];
+      const set = document.createElement('div'); set.className = 'set ' + side;
+      let html = `<div class="back ${back}"></div>`;
+      if (extra.startsWith('beams:')) { const c = extra.slice(6);
+        html += `<div class="beams">${[[18, 14, 9], [50, -3, 12], [82, -15, 10]].map(([x, a, sp]) => `<i class="beam" style="--x:${x}%;--a:${a}deg;--sp:${sp}s;--c:${c}"></i>`).join('')}</div>`; }
+      set.innerHTML = html;
+      pl.forEach(([s, fill]) => { const el = document.createElement('div'); el.className = 'plane'; el.innerHTML = fill(innerHeight + m * s + 60); set.appendChild(el); planes.push({ el, s }); });
+      atm.appendChild(set);
+    });
+    sizeAtmos();
+  };
+  // Torn-paper edges as SVG masks: the top edge is paper below a ragged line, the bottom edge is its mirror.
+  (() => { aSeed = 5; let t = 'M0 26 L0 ' + R(6, 14).toFixed(1);
+    for (let x = 8; x <= 640; x += R(5, 13)) t += ` L${Math.min(x, 640).toFixed(1)} ${(x >= 632 ? 10 : R(3, 17)).toFixed(1)}`;
+    t += ' L640 10 L640 26 Z';
+    const svg = (flip) => `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='640' height='26' viewBox='0 0 640 26'><path d='${t}'${flip ? " transform='matrix(1 0 0 -1 0 26)'" : ''}/></svg>`)}")`;
+    root.style.setProperty('--tear-t', svg(false)); root.style.setProperty('--tear-b', svg(true)); })();
+
+  buildAtmos();
+  addEventListener('scroll', () => requestAnimationFrame(atmosScroll), { passive: true });
+  let lastW = innerWidth;
+  addEventListener('resize', () => { if (innerWidth !== lastW) { lastW = innerWidth; buildAtmos(); } else sizeAtmos(); });
+  if ('ResizeObserver' in window) new ResizeObserver(() => sizeAtmos()).observe(document.body);
+
+})();
+</script>
+</body>
+</html>
