@@ -1,0 +1,643 @@
+{
+  "version": 1,
+  "slots": {
+    "feat-1": {
+      "src": "assets/featured/mtt.webp",
+      "srcset": [
+        [
+          "assets/featured/mtt-400.webp",
+          400
+        ],
+        [
+          "assets/featured/mtt.webp",
+          700
+        ]
+      ],
+      "alt": "Mafia's Tender Torture poster",
+      "poster": null,
+      "captions": {
+        "title": "Mafia's Tender Torture"
+      },
+      "link": null
+    },
+    "feat-2": {
+      "src": "assets/featured/heretic.webp",
+      "srcset": [
+        [
+          "assets/featured/heretic-400.webp",
+          400
+        ],
+        [
+          "assets/featured/heretic.webp",
+          700
+        ]
+      ],
+      "alt": "Heretic poster",
+      "poster": null,
+      "captions": {
+        "title": "Heretic"
+      },
+      "link": null
+    },
+    "feat-3": {
+      "src": "assets/featured/chicken.webp",
+      "srcset": [
+        [
+          "assets/featured/chicken-400.webp",
+          400
+        ],
+        [
+          "assets/featured/chicken.webp",
+          700
+        ]
+      ],
+      "alt": "The Chicken Sisters poster",
+      "poster": null,
+      "captions": {
+        "title": "The Chicken Sisters"
+      },
+      "link": null
+    },
+    "still-1": {
+      "src": "assets/photos/sweet-smile.webp",
+      "srcset": [
+        [
+          "assets/photos/sweet-smile-400.webp",
+          400
+        ],
+        [
+          "assets/photos/sweet-smile-800.webp",
+          800
+        ],
+        [
+          "assets/photos/sweet-smile.webp",
+          1179
+        ]
+      ],
+      "alt": "Haylie Hansen laughing, hair up",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "still-2": {
+      "src": "assets/photos/villain-leather.webp",
+      "srcset": [
+        [
+          "assets/photos/villain-leather-400.webp",
+          400
+        ],
+        [
+          "assets/photos/villain-leather-800.webp",
+          800
+        ],
+        [
+          "assets/photos/villain-leather.webp",
+          1179
+        ]
+      ],
+      "alt": "Haylie Hansen in a black leather jacket",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "scene-1": {
+      "src": "assets/video/chicken-sisters.mp4",
+      "srcset": [],
+      "poster": {
+        "src": "assets/video/chicken-sisters.webp",
+        "srcset": [
+          [
+            "assets/video/chicken-sisters-400.webp",
+            400
+          ],
+          [
+            "assets/video/chicken-sisters.webp",
+            886
+          ]
+        ]
+      },
+      "duration": 65,
+      "captions": {
+        "title": "The Chicken Sisters",
+        "sub": "Recurring, Hallmark series"
+      },
+      "link": null
+    },
+    "scene-2": {
+      "src": "assets/video/mtt-hospital.mp4",
+      "srcset": [],
+      "poster": {
+        "src": "assets/video/mtt-hospital.webp",
+        "srcset": [
+          [
+            "assets/video/mtt-hospital-400.webp",
+            400
+          ],
+          [
+            "assets/video/mtt-hospital.webp",
+            720
+          ]
+        ]
+      },
+      "captions": {
+        "title": "Mafia's Tender Torture",
+        "sub": "Lead, hospital scene"
+      },
+      "link": null
+    },
+    "scene-3": {
+      "src": "assets/video/mtt-office.mp4",
+      "srcset": [],
+      "poster": {
+        "src": "assets/video/mtt-office.webp",
+        "srcset": [
+          [
+            "assets/video/mtt-office-400.webp",
+            400
+          ],
+          [
+            "assets/video/mtt-office.webp",
+            720
+          ]
+        ]
+      },
+      "captions": {
+        "title": "Mafia's Tender Torture",
+        "sub": "Lead, office scene"
+      },
+      "link": null
+    },
+    "scene-4": {
+      "src": "assets/video/twin-sister.mp4",
+      "srcset": [],
+      "poster": {
+        "src": "assets/video/twin-sister.webp",
+        "srcset": [
+          [
+            "assets/video/twin-sister-400.webp",
+            400
+          ],
+          [
+            "assets/video/twin-sister.webp",
+            720
+          ]
+        ]
+      },
+      "duration": 88,
+      "captions": {
+        "title": "Marrying My Twin Sister's Rich Fiancé",
+        "sub": "Lead"
+      },
+      "link": null
+    },
+    "scene-5": {
+      "src": "assets/video/heretic.mp4",
+      "srcset": [],
+      "poster": {
+        "src": "assets/video/heretic.webp",
+        "srcset": [
+          [
+            "assets/video/heretic-400.webp",
+            400
+          ],
+          [
+            "assets/video/heretic.webp",
+            848
+          ]
+        ]
+      },
+      "duration": 27,
+      "captions": {
+        "title": "Heretic",
+        "sub": "Principal, A24 feature"
+      },
+      "link": null
+    },
+    "print-1": {
+      "src": "assets/more/pink-fur.webp",
+      "srcset": [
+        [
+          "assets/more/pink-fur-400.webp",
+          400
+        ],
+        [
+          "assets/more/pink-fur.webp",
+          772
+        ]
+      ],
+      "alt": "Haylie Hansen smiling in a pink faux-fur jacket",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "print-2": {
+      "src": "assets/more/bouquet.webp",
+      "srcset": [
+        [
+          "assets/more/bouquet-400.webp",
+          400
+        ],
+        [
+          "assets/more/bouquet.webp",
+          651
+        ]
+      ],
+      "alt": "Haylie Hansen holding a pink bouquet",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "print-3": {
+      "src": "assets/more/denim.webp",
+      "srcset": [
+        [
+          "assets/more/denim-400.webp",
+          400
+        ],
+        [
+          "assets/more/denim.webp",
+          711
+        ]
+      ],
+      "alt": "Haylie Hansen in an oversized denim jacket",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "print-4": {
+      "src": "assets/more/blazer.webp",
+      "srcset": [
+        [
+          "assets/more/blazer-400.webp",
+          400
+        ],
+        [
+          "assets/more/blazer.webp",
+          707
+        ]
+      ],
+      "alt": "Haylie Hansen in a black blazer",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "print-5": {
+      "src": "assets/more/sfx-bite.webp",
+      "srcset": [
+        [
+          "assets/more/sfx-bite.webp",
+          360
+        ]
+      ],
+      "alt": "Haylie Hansen in bloody special-effects makeup, fangs bared",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "print-6": {
+      "src": "assets/more/chair.webp",
+      "srcset": [
+        [
+          "assets/more/chair-400.webp",
+          400
+        ],
+        [
+          "assets/more/chair.webp",
+          661
+        ]
+      ],
+      "alt": "Haylie Hansen posed upside down on a chair in combat boots",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "look-1": {
+      "src": "assets/model/foil-stand.webp",
+      "srcset": [
+        [
+          "assets/model/foil-stand-400.webp",
+          400
+        ],
+        [
+          "assets/model/foil-stand-800.webp",
+          800
+        ],
+        [
+          "assets/model/foil-stand.webp",
+          1136
+        ]
+      ],
+      "alt": "Haylie Hansen in black against silver foil",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "look-2": {
+      "src": "assets/model/chain-veil.webp",
+      "srcset": [
+        [
+          "assets/model/chain-veil-400.webp",
+          400
+        ],
+        [
+          "assets/model/chain-veil-800.webp",
+          800
+        ],
+        [
+          "assets/model/chain-veil.webp",
+          1148
+        ]
+      ],
+      "alt": "Haylie Hansen in a chain veil and black corset",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "look-3": {
+      "src": "assets/model/runway-skirt.webp",
+      "srcset": [
+        [
+          "assets/model/runway-skirt-400.webp",
+          400
+        ],
+        [
+          "assets/model/runway-skirt.webp",
+          720
+        ]
+      ],
+      "alt": "Haylie Hansen walking a runway in a black corset and pink skirt",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "look-4": {
+      "src": "assets/model/wings.webp",
+      "srcset": [
+        [
+          "assets/model/wings-400.webp",
+          400
+        ],
+        [
+          "assets/model/wings-800.webp",
+          800
+        ],
+        [
+          "assets/model/wings.webp",
+          1032
+        ]
+      ],
+      "alt": "Haylie Hansen in white with feathered angel wings",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "look-5": {
+      "src": "assets/model/lace-roses.webp",
+      "srcset": [
+        [
+          "assets/model/lace-roses-400.webp",
+          400
+        ],
+        [
+          "assets/model/lace-roses.webp",
+          941
+        ]
+      ],
+      "alt": "Haylie Hansen in white lace among pink roses",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "look-6": {
+      "src": "assets/model/runway-boots.webp",
+      "srcset": [
+        [
+          "assets/model/runway-boots-400.webp",
+          400
+        ],
+        [
+          "assets/model/runway-boots.webp",
+          932
+        ]
+      ],
+      "alt": "Haylie Hansen on a runway in lace and combat boots",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "look-7": {
+      "src": "assets/model/cowgirl-hat.webp",
+      "srcset": [
+        [
+          "assets/model/cowgirl-hat-400.webp",
+          400
+        ],
+        [
+          "assets/model/cowgirl-hat.webp",
+          611
+        ]
+      ],
+      "alt": "Haylie Hansen in a cowboy hat",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "look-8": {
+      "src": "assets/model/blue-dress.webp",
+      "srcset": [
+        [
+          "assets/model/blue-dress-400.webp",
+          400
+        ],
+        [
+          "assets/model/blue-dress.webp",
+          923
+        ]
+      ],
+      "alt": "Haylie Hansen in a blue dress on a lakeside deck",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "look-9": {
+      "src": "assets/model/wall.webp",
+      "srcset": [
+        [
+          "assets/model/wall-400.webp",
+          400
+        ],
+        [
+          "assets/model/wall-800.webp",
+          800
+        ],
+        [
+          "assets/model/wall.webp",
+          956
+        ]
+      ],
+      "alt": "Haylie Hansen posing against a slatted wall",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "look-10": {
+      "src": "assets/model/pink-blouse.webp",
+      "srcset": [
+        [
+          "assets/model/pink-blouse-400.webp",
+          400
+        ],
+        [
+          "assets/model/pink-blouse-800.webp",
+          800
+        ],
+        [
+          "assets/model/pink-blouse.webp",
+          1179
+        ]
+      ],
+      "alt": "Haylie Hansen in a pink paisley blouse",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "look-11": {
+      "src": "assets/model/swim.webp",
+      "srcset": [
+        [
+          "assets/model/swim-400.webp",
+          400
+        ],
+        [
+          "assets/model/swim.webp",
+          943
+        ]
+      ],
+      "alt": "Haylie Hansen in a blue swimsuit and white sunglasses",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "look-12": {
+      "src": "assets/model/white-crop.webp",
+      "srcset": [
+        [
+          "assets/model/white-crop-400.webp",
+          400
+        ],
+        [
+          "assets/model/white-crop-800.webp",
+          800
+        ],
+        [
+          "assets/model/white-crop.webp",
+          1065
+        ]
+      ],
+      "alt": "Haylie Hansen in a white crop top, studio",
+      "poster": null,
+      "captions": {},
+      "link": null
+    },
+    "look-13": {
+      "src": "assets/model/chain-foil.webp",
+      "srcset": [
+        [
+          "assets/model/chain-foil-400.webp",
+          400
+        ],
+        [
+          "assets/model/chain-foil-800.webp",
+          800
+        ],
+        [
+          "assets/model/chain-foil.webp",
+          1141
+        ]
+      ],
+      "alt": "Haylie Hansen in a chain headdress against silver foil",
+      "poster": null,
+      "captions": {},
+      "link": null
+    }
+  },
+  "credits": [
+    {
+      "heading": "",
+      "rows": [
+        {
+          "title": "Chalk It Up to Love",
+          "kind": "TV movie",
+          "role": "Supporting lead",
+          "dir": "Dir. Terry Ingram"
+        },
+        {
+          "title": "Sidelined 3",
+          "kind": "Feature",
+          "role": "Principal",
+          "dir": "Dir. Michael Medico, Tubi"
+        },
+        {
+          "title": "Rags 2 Richmond",
+          "kind": "Feature",
+          "role": "Principal",
+          "dir": "Dir. Tesh Guttikonda"
+        },
+        {
+          "title": "The Idaho Murders",
+          "kind": "TV movie",
+          "role": "Supporting lead",
+          "dir": "Dir. Steven Adelson, Lifetime"
+        },
+        {
+          "title": "The Chicken Sisters",
+          "kind": "Series",
+          "role": "Recurring",
+          "dir": "Dir. various, Hallmark"
+        },
+        {
+          "title": "Casket Girls",
+          "kind": "Feature",
+          "role": "Supporting",
+          "dir": "Dir. Justin Dyck, Lighthouse"
+        },
+        {
+          "title": "How to Lose a Popularity Contest",
+          "kind": "Feature",
+          "role": "Principal",
+          "dir": "Dir. Stephen Campanelli, Tubi"
+        },
+        {
+          "title": "Heretic",
+          "kind": "Feature",
+          "role": "Principal",
+          "dir": "Dir. Scott Beck & Bryan Woods, A24"
+        },
+        {
+          "title": "Mafia's Tender Torture",
+          "kind": "Mini series",
+          "role": "Lead",
+          "dir": "Dir. Dom Cutrupi"
+        },
+        {
+          "title": "Marrying My Twin Sister's Rich Fiancé",
+          "kind": "",
+          "role": "Lead",
+          "dir": "Dir. Leo Max"
+        },
+        {
+          "title": "The Alpha's Heiress Is a Maid",
+          "kind": "Web series",
+          "role": "Lead",
+          "dir": "Dir. Eric Zhang"
+        },
+        {
+          "title": "Trapped in Your Toxic Love",
+          "kind": "Mini series",
+          "role": "Lead",
+          "dir": "Dir. Dom Cutrupi"
+        }
+      ]
+    }
+  ]
+}

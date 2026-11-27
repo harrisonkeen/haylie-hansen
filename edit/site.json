@@ -1,0 +1,399 @@
+{
+  "version": 1,
+  "slots": [
+    {
+      "id": "feat-1",
+      "label": "Featured poster 1",
+      "kind": "poster",
+      "orientation": "portrait",
+      "variants": [
+        400
+      ],
+      "captions": [
+        {
+          "id": "title",
+          "label": "Title",
+          "max": 120
+        }
+      ]
+    },
+    {
+      "id": "feat-2",
+      "label": "Featured poster 2",
+      "kind": "poster",
+      "orientation": "portrait",
+      "variants": [
+        400
+      ],
+      "captions": [
+        {
+          "id": "title",
+          "label": "Title",
+          "max": 120
+        }
+      ]
+    },
+    {
+      "id": "feat-3",
+      "label": "Featured poster 3",
+      "kind": "poster",
+      "orientation": "portrait",
+      "variants": [
+        400
+      ],
+      "captions": [
+        {
+          "id": "title",
+          "label": "Title",
+          "max": 120
+        }
+      ]
+    },
+    {
+      "id": "still-1",
+      "label": "Sweetheart photo",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "still-2",
+      "label": "Badass photo",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "scene-1",
+      "label": "Sweetheart scene (wide)",
+      "kind": "video",
+      "orientation": "landscape",
+      "variants": [],
+      "captions": [
+        {
+          "id": "title",
+          "label": "Title",
+          "max": 80
+        },
+        {
+          "id": "sub",
+          "label": "Line under the title",
+          "max": 80
+        }
+      ]
+    },
+    {
+      "id": "scene-2",
+      "label": "Sweetheart scene (tall) 1",
+      "kind": "video",
+      "orientation": "portrait",
+      "variants": [],
+      "captions": [
+        {
+          "id": "title",
+          "label": "Title",
+          "max": 80
+        },
+        {
+          "id": "sub",
+          "label": "Line under the title",
+          "max": 80
+        }
+      ]
+    },
+    {
+      "id": "scene-3",
+      "label": "Sweetheart scene (tall) 2",
+      "kind": "video",
+      "orientation": "portrait",
+      "variants": [],
+      "captions": [
+        {
+          "id": "title",
+          "label": "Title",
+          "max": 80
+        },
+        {
+          "id": "sub",
+          "label": "Line under the title",
+          "max": 80
+        }
+      ]
+    },
+    {
+      "id": "scene-4",
+      "label": "Badass scene 1",
+      "kind": "video",
+      "orientation": "landscape",
+      "variants": [],
+      "captions": [
+        {
+          "id": "title",
+          "label": "Title",
+          "max": 80
+        },
+        {
+          "id": "sub",
+          "label": "Line under the title",
+          "max": 80
+        }
+      ]
+    },
+    {
+      "id": "scene-5",
+      "label": "Badass scene 2",
+      "kind": "video",
+      "orientation": "landscape",
+      "variants": [],
+      "captions": [
+        {
+          "id": "title",
+          "label": "Title",
+          "max": 80
+        },
+        {
+          "id": "sub",
+          "label": "Line under the title",
+          "max": 80
+        }
+      ]
+    },
+    {
+      "id": "print-1",
+      "label": "Sweetheart print 1",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400
+      ],
+      "captions": []
+    },
+    {
+      "id": "print-2",
+      "label": "Sweetheart print 2",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400
+      ],
+      "captions": []
+    },
+    {
+      "id": "print-3",
+      "label": "Sweetheart print 3",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400
+      ],
+      "captions": []
+    },
+    {
+      "id": "print-4",
+      "label": "Badass print 1",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400
+      ],
+      "captions": []
+    },
+    {
+      "id": "print-5",
+      "label": "Badass print 2",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400
+      ],
+      "captions": []
+    },
+    {
+      "id": "print-6",
+      "label": "Badass print 3",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400
+      ],
+      "captions": []
+    },
+    {
+      "id": "look-1",
+      "label": "Modelling photo 1",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "look-2",
+      "label": "Modelling photo 2",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "look-3",
+      "label": "Modelling photo 3",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "look-4",
+      "label": "Modelling photo 4",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "look-5",
+      "label": "Modelling photo 5",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "look-6",
+      "label": "Modelling photo 6",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "look-7",
+      "label": "Modelling photo 7",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "look-8",
+      "label": "Modelling photo 8",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "look-9",
+      "label": "Modelling photo 9",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "look-10",
+      "label": "Modelling photo 10",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "look-11",
+      "label": "Modelling photo 11",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "look-12",
+      "label": "Modelling photo 12",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    },
+    {
+      "id": "look-13",
+      "label": "Modelling photo 13",
+      "kind": "image",
+      "orientation": "portrait",
+      "variants": [
+        400,
+        800
+      ],
+      "captions": []
+    }
+  ],
+  "credits": {
+    "fields": [
+      {
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "id": "kind",
+        "label": "Type (Feature, Series\u2026)"
+      },
+      {
+        "id": "role",
+        "label": "Role"
+      },
+      {
+        "id": "dir",
+        "label": "Director, network"
+      }
+    ],
+    "heading": "",
+    "row": "<li class=\"credit\"><span><span class=\"t\">{title}</span>{#kind} <span class=\"k\">{kind}</span>{/kind}</span><span class=\"role\">{role}</span>{#dir}<span class=\"dir\">{dir}</span>{/dir}</li>",
+    "group": "{heading}{first}{rest}",
+    "columns": 2,
+    "column": "<ol>\n          {rows}\n        </ol>",
+    "joiner": "\n          "
+  }
+}
